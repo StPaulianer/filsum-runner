@@ -55,6 +55,7 @@ public class RegisterController {
 
             model.addAttribute("runnerData", new RunnerFormData());
             model.addAttribute("availShirts", availShirts);
+            model.addAttribute("norun", true);
             return "register/register";
         }
 
