@@ -100,8 +100,9 @@
                     <ul class="media-list">
                         <li class="media">
                             <div class="media-left">
+                            <a href="http://www.dental-schulte.de">
                                 <img class="media-logo" src="../images/Schulte_Logo_9cm.png" alt="Dentallabor Schulte Dental">
-
+                            </a>
                             </div>
                             <div class="media-body">
                                 <h4 class="media-heading">Dentallabor Schulte Dental</h4>

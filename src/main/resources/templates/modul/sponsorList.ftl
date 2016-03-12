@@ -33,8 +33,9 @@
 
               <div class="col-sm-4 col-md-2">
                 <div class="thumbnail">
-                  <img class="media-logo-small" src="../images/Schulte_nurLogo_9cm.png" alt="Dentallabor Schulte Dental">
-
+                    <a class="text-center" href="http://www.dental-schulte.de">
+                        <img class="media-logo-small" src="../images/Schulte_nurLogo_9cm.png" alt="Dentallabor Schulte Dental">
+                    </a>
                 </div>
               </div>
 

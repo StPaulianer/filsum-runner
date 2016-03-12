@@ -19,6 +19,12 @@
 
                     <div class="panel-body">
 
+                    <@spring.bind path="runnerData.selectedRun" />
+                    <#list spring.status.errorMessages as error>
+                        <div class="alert alert-danger">
+                        ${error}
+                        </div>
+                    </#list>
 
                         <#if runs?size=0>
                             <p>Aktuell sind keine Online-Anmeldungen möglich.</p>
