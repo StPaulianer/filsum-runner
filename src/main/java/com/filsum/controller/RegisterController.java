@@ -1,7 +1,9 @@
 package com.filsum.controller;
 
+import com.filsum.model.Participation;
 import com.filsum.model.Run;
 import com.filsum.model.RunnerFormData;
+import com.filsum.service.ParticipationService;
 import com.filsum.service.RegisterService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.validation.Valid;
+import java.time.LocalDate;
 import java.util.*;
 
 @Controller
@@ -30,6 +33,25 @@ public class RegisterController {
 
     @Autowired
     private RegisterService registerService;
+
+    @Autowired
+    private ParticipationService participationService;
+
+    /**
+     * shows the paid participants of runs of the actual year
+     */
+    @RequestMapping(value = "/registerlist")
+    public String participantView(Model model) {
+        LOG.debug("register list");
+        System.out.println("register list start");
+
+        LocalDate actualDate = LocalDate.now();
+        List<Participation> participants = participationService.findActualRegistered(actualDate.getYear());
+        model.addAttribute("participants", participants);
+
+        System.out.println("participants list end");
+        return "registerlist";
+    }
 
     @RequestMapping(value = "/register")
     public String registerView(Model model) {

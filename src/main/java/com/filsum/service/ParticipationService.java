@@ -53,4 +53,20 @@ public class ParticipationService {
         List<Run> runsOfYear = runRepository.findByStartDateBetween(firstDay, lastDay);
         return participationRepository.findByRunInAndPaid(runsOfYear, true);
     }
+
+    /**
+     *
+     * @param year actual year
+     * @return
+     */
+    public List<Participation> findActualRegistered(int year){
+
+        // first day of the actual year
+        LocalDate firstDay = LocalDate.of(year, Month.JANUARY, 1);
+        // last day of the actual year
+        LocalDate lastDay = LocalDate.of(year, Month.DECEMBER, 31);
+
+        List<Run> runsOfYear = runRepository.findByStartDateBetween(firstDay, lastDay);
+        return participationRepository.findByRunIn(runsOfYear);
+    }
 }
