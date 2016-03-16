@@ -17,7 +17,7 @@
 
                 <div class="row">
                     <div class="col-lg-12">
-                        <table id="particpantTable"
+                        <table id="registerTable"
                                class="table table-striped table-hover tablesorter table-responsive table-condensed">
                             <thead>
                             <tr>
