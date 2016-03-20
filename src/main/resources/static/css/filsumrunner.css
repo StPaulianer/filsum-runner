@@ -130,6 +130,9 @@ select.tablesorter-filter {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9edf7', endColorstr='#ffb9def0', GradientType=0);
     border-color: #9acfea;
 }
+.grid-space {
+    padding-bottom: 10px;
+}
 @media (max-width: 767px) {
     .logo {
         width: 300px;

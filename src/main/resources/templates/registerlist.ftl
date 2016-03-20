@@ -17,6 +17,7 @@
 
                 <div class="row">
                     <div class="col-lg-12">
+                        <div class="table-responsive">
                         <table id="registerTable"
                                class="table table-striped table-hover tablesorter table-responsive table-condensed">
                             <thead>
@@ -46,6 +47,7 @@
                                 </#list>
                             </tbody>
                         </table>
+                        </div>
                     </div>
                 </div>
 

@@ -109,6 +109,7 @@
                                 Am Burgplatz 16   <br>
                                 26849 Filsum<br>
                                 Tel.: 04957 – 212 32 59  <br>
+                                <a href="http://www.dental-schulte.de"> www.dental-schulte.de</a>
                             </div>
                         </li>
                     </ul>
