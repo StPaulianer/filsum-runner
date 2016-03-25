@@ -1,4 +1,4 @@
-<#macro default title="">
+<#macro default title="" flickr=false>
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,6 +50,10 @@
 <script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script>
 <script type="text/javascript" src="/js/jquery.tablesorter.widgets.min.js"></script>
 <script type="text/javascript" src="/js/filsumrunner.js"></script>
+
+<#if flickr>
+    <script type="text/javascript" src="/js/filsumflickr.js"></script>
+</#if>
 
 <script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
 <script src="js/bootstrap-image-gallery.min.js"></script>

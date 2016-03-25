@@ -1,6 +1,6 @@
 <#import "layout/default.ftl" as layout>
 <#import "/spring.ftl" as spring/>
-<@layout.default >
+<@layout.default "Filsum Loeppt" true>
 
 <#include "modul/navigation.ftl">
 

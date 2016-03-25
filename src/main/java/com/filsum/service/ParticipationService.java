@@ -69,4 +69,14 @@ public class ParticipationService {
         List<Run> runsOfYear = runRepository.findByStartDateBetween(firstDay, lastDay);
         return participationRepository.findByRunIn(runsOfYear);
     }
+
+    public void savePayStatus(List<Participation> participations){
+        for (Participation participation : participations) {
+            if(participation.getHasPaid() && participation.getParticipationId() != null){
+                Participation dbParticipation = participationRepository.findOne(participation.getParticipationId());
+                dbParticipation.setPaid(true);
+                participationRepository.save(dbParticipation);
+            }
+        }
+    }
 }

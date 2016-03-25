@@ -3,10 +3,6 @@ package com.filsum.model;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 
 @Entity
 @XmlRootElement
@@ -19,6 +15,8 @@ public class Participation implements Serializable {
     private String runtime;
 
     private boolean paid = false;
+
+    private boolean hasPaid = false;
 
     private String startnumber;
 
@@ -77,5 +75,14 @@ public class Participation implements Serializable {
 
     public void setStartnumber(String startnumber) {
         this.startnumber = startnumber;
+    }
+
+    @Transient
+    public boolean getHasPaid() {
+        return hasPaid;
+    }
+
+    public void setHasPaid(boolean hasPaid) {
+        this.hasPaid = hasPaid;
     }
 }
