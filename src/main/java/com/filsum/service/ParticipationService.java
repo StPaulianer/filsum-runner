@@ -67,7 +67,7 @@ public class ParticipationService {
         LocalDate lastDay = LocalDate.of(year, Month.DECEMBER, 31);
 
         List<Run> runsOfYear = runRepository.findByStartDateBetween(firstDay, lastDay);
-        return participationRepository.findByRunIn(runsOfYear);
+        return participationRepository.findByRunInOrderByParticipationId(runsOfYear);
     }
 
     public void savePayStatus(List<Participation> participations){

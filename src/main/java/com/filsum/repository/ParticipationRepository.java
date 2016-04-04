@@ -13,7 +13,7 @@ public interface ParticipationRepository extends JpaRepository<Participation, Lo
 
     List<Participation> findByRun(Run run);
 
-    List<Participation> findByRunIn(Collection<Run> runs);
+    List<Participation> findByRunInOrderByParticipationId(Collection<Run> runs);
 
     List<Participation> findByRunInAndPaid(Collection<Run> runs, boolean paid);
 
