@@ -22,13 +22,13 @@
                                class="table table-striped table-hover tablesorter table-responsive table-condensed">
                             <thead>
                             <tr>
-                                <th data-sorter="false" class="col-sm-1">lfd. Nr.</th>
-                                <th width="20%">Vorname</th>
-                                <th data-placeholder="Tippe deinen Nachnamen ein..." width="20%">Nachname</th>
-                                <th width="8%">Verein</th>
-                                <th data-placeholder="Tippe m/w"width="5%">Geschlecht</th>
-                                <th width="8%">Jahrgang</th>
-                                <th data-placeholder="Tippe 10 km oder 5 km..." width="8%">Strecke</th>
+                                <th width="10%" data-sorter="false" class="col-sm-1">lfd. Nr.</th>
+                                <th width="15%">Vorname</th>
+                                <th data-placeholder="Tippe deinen Nachnamen ein..." width="15%">Nachname</th>
+                                <th width="20%">Verein</th>
+                                <th data-placeholder="Tippe m/w" width="10%">Geschlecht</th>
+                                <th width="10%">Jahrgang</th>
+                                <th data-placeholder="Tippe 10 km oder 5 km..." width="15%">Strecke</th>
                             </thead>
                             <tbody>
                                 <#list participants as participant>

@@ -19,7 +19,7 @@
                     </div>
                 </#if>
 
-                <form name="participantsFormData" class="form-horizontal" action="/admin/registerlist" role="form"
+                <form name="participantsFormData" class="form-horizontal" action="/admin/change" role="form"
                       method="post">
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 
@@ -70,8 +70,11 @@
                     </div>
 
                     <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-primary btn-filsum">Bezahlt</button>
+                        <div class="col-sm-offset-2 col-sm-2">
+                            <button type="submit" name="pay" value="pay" class="btn btn-primary btn-filsum">Bezahlt</button>
+                        </div>
+                        <div class="col-sm-offset-3 col-sm-2">
+                            <button type="submit" name="delete" value="delete" class="btn btn-primary btn-filsum">Löschen</button>
                         </div>
                     </div>
 

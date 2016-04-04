@@ -37,12 +37,26 @@ public class AdminController {
         return "admin/registerlist";
     }
 
-    @RequestMapping(value = "/admin/registerlist", method = RequestMethod.POST)
+    @RequestMapping(params = "pay", value = "/admin/change", method = RequestMethod.POST)
     public String postRegisterlist(Model model, @ModelAttribute("participantsFormData") ParticipationPaidFormData participantsFormData,
                                    BindingResult bindingResult) {
         LOG.debug("save pay list: ", participantsFormData.getParticipants().size());
 
         participationService.savePayStatus(participantsFormData.getParticipants());
+
+        LocalDate actualDate = LocalDate.now();
+        List<Participation> participants = participationService.findActualRegistered(actualDate.getYear());
+        model.addAttribute("participantsFormData", new ParticipationPaidFormData(participants));
+        model.addAttribute("success", "success");
+        return "admin/registerlist";
+    }
+
+    @RequestMapping(params = "delete", value = "/admin/change", method = RequestMethod.POST)
+    public String postDeleteRegistered(Model model, @ModelAttribute("participantsFormData") ParticipationPaidFormData participantsFormData,
+                                   BindingResult bindingResult) {
+        LOG.debug("delete pay list: ", participantsFormData.getParticipants().size());
+
+        participationService.deleteRegistered(participantsFormData.getParticipants());
 
         LocalDate actualDate = LocalDate.now();
         List<Participation> participants = participationService.findActualRegistered(actualDate.getYear());

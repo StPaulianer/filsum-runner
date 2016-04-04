@@ -79,4 +79,13 @@ public class ParticipationService {
             }
         }
     }
+
+    public void deleteRegistered(List<Participation> participations){
+        for (Participation participation : participations) {
+            if(participation.getHasPaid() && participation.getParticipationId() != null){
+                Participation dbParticipation = participationRepository.findOne(participation.getParticipationId());
+                participationRepository.delete(dbParticipation);
+            }
+        }
+    }
 }
