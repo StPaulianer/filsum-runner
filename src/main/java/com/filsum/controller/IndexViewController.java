@@ -42,7 +42,7 @@ public class IndexViewController {
         return "dataprivacy";
     }
 
-    @RequestMapping(path = "/advertisment")
+    @RequestMapping(path = "/infos")
     public String viewAdvertisment() {
         return "advertisment";
     }

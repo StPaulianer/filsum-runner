@@ -18,7 +18,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="index"><a href="/index">Home</a></li>
-                <li class="advertisment"><a href="/advertisment">Infos</a></li>
+                <li class="infos"><a href="/infos">Infos</a></li>
                 <li class="register"><a href="/register">Anmeldung</a></li>
                 <li class="participantslist"><a href="/participantslist">Teilnehmerliste</a></li>
                 <li class="sponsor"><a href="/sponsor">Sponsoren</a></li>
