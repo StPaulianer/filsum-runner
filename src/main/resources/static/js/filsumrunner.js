@@ -53,9 +53,6 @@ $(document).ready(function()
             // storage function works with a fixed url (for all license/copy, license/edit urls...)
             fixedUrl: "particpantTable",
 
-            // sort on the first column and third column, order asc
-            sortList: [[6,0]],
-
             widgetOptions: {
                 // using the default zebra striping class name, so it actually isn't included in the theme variable above
                 // this is ONLY needed for bootstrap theming if you are using the filter widget, because rows are hidden
