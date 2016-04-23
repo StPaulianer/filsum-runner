@@ -55,7 +55,7 @@
                                             <td>${participant.runner.birthyear?c}</td>
                                             <td>${participant.runner.club}</td>
                                             <@spring.bind path="resultFormData.participants[${participant_index}].startnumber" />
-                                            <td><input type="text" id="${spring.status.expression}" name="${spring.status.expression}" value="${spring.status.value}"/></td>
+                                            <td><input type="text" id="${spring.status.expression}" name="${spring.status.expression}" value="${spring.status.value!""}"/></td>
 
                                             <@spring.bind path="resultFormData.participants[${participant_index}].runtime" />
                                             <td><input type="text" id="${spring.status.expression}" name="${spring.status.expression}" value="${spring.status.value!""}"/></td>
