@@ -18,7 +18,8 @@
         <!-- Alle Navigationslinks, Formulare und anderer Inhalt werden hier zusammengefasst und können dann ein- und ausgeblendet werden -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="index"><a href="/admin/registerlist">Registrierungsliste</a></li>
+                <li class="/admin/registerlist"><a href="/admin/registerlist">Registrierungsliste</a></li>
+                <li class="/admin/resultlist"><a href="/admin/resultlist">Ergebnisse</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>

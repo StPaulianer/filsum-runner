@@ -57,6 +57,11 @@ public class IndexViewController {
         return "sponsor";
     }
 
+    @RequestMapping(path = "/urkunde")
+    public String viewUrkunde() {
+        return "urkunde";
+    }
+
     @InitBinder
     public void dataBinding(WebDataBinder binder) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");

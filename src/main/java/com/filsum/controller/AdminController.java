@@ -4,6 +4,7 @@ import com.filsum.model.Participation;
 import com.filsum.model.ParticipationPaidFormData;
 import com.filsum.model.RunnerFormData;
 import com.filsum.service.ParticipationService;
+import com.filsum.service.ResultService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,9 @@ public class AdminController {
     @Autowired
     private ParticipationService participationService;
 
+    @Autowired
+    private ResultService resultService;
+
     @RequestMapping(value = "/admin/registerlist", method = RequestMethod.GET)
     public String getRegisterlist(Model model) {
         LOG.debug("register list");
@@ -35,6 +39,31 @@ public class AdminController {
         model.addAttribute("participantsFormData", new ParticipationPaidFormData(participants));
 
         return "admin/registerlist";
+    }
+
+    @RequestMapping(value = "/admin/resultlist", method = RequestMethod.GET)
+    public String getResultlist(Model model) {
+        LOG.debug("register list");
+
+        LocalDate actualDate = LocalDate.now();
+        List<Participation> participants = participationService.findActualRegistered(actualDate.getYear());
+        model.addAttribute("resultFormData", new ParticipationPaidFormData(participants));
+
+        return "admin/resultlist";
+    }
+
+    @RequestMapping(value = "/admin/result", method = RequestMethod.POST)
+    public String postResult(Model model, @ModelAttribute("resultFormData") ParticipationPaidFormData participantsFormData,
+                                   BindingResult bindingResult) {
+        LOG.debug("save results: ", participantsFormData.getParticipants().size());
+
+        resultService.saveResult(participantsFormData.getParticipants());
+
+        LocalDate actualDate = LocalDate.now();
+        List<Participation> participants = participationService.findActualRegistered(actualDate.getYear());
+        model.addAttribute("resultFormData", new ParticipationPaidFormData(participants));
+        model.addAttribute("success", "success");
+        return "admin/resultlist";
     }
 
     @RequestMapping(params = "pay", value = "/admin/change", method = RequestMethod.POST)
