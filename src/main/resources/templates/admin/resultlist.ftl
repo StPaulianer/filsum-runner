@@ -32,13 +32,15 @@
                                     <thead>
                                     <tr>
                                         <th data-sorter="false" class="col-sm-1">Platz*</th>
+                                        <th class="col-sm-1">Strecke</th>
                                         <th class="filter-select col-sm-1">Altersklasse</th>
                                         <th class="col-sm-2">Vorname</th>
                                         <th data-placeholder="Tippe deinen Nachnamen ein..." class="col-sm-2">Nachname</th>
                                         <th class="col-sm-1">Jahrgang</th>
-                                        <th data-placeholder="Tippe deinen Verein ein..." class="col-sm-2">Verein</th>
+                                        <th data-placeholder="Tippe deinen Verein ein..." class="col-sm-1">Verein</th>
                                         <th class="col-sm-1">Startnummer</th>
                                         <th class="col-sm-2">Zeit</th>
+
 
                                     </thead>
                                     <tbody>
@@ -48,7 +50,7 @@
                                             <input name="${spring.status.expression}" type="hidden" value="${participant.participationId}"/>
 
                                             <td></td>
-
+                                            <td>${participant.run.name}</td>
                                             <td>${participant.runner.calculateAgeGroup}</td>
                                             <td>${participant.runner.forename}</td>
                                             <td>${participant.runner.surname}</td>

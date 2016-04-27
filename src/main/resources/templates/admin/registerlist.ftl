@@ -39,8 +39,7 @@
                                         <th width="8%">Verein</th>
                                         <th data-placeholder="Tippe m/w" width="5%">Geschlecht</th>
                                         <th width="8%">Jahrgang</th>
-                                        <th data-placeholder="Tippe 10 km oder 5 km..." width="8%">Strecke</th>
-
+                                        <th width="8%">E-Mail</th>
                                     </thead>
                                     <tbody>
                                         <#list participantsFormData.participants as participant>
@@ -58,7 +57,7 @@
                                             <td>${participant.runner.club}</td>
                                             <td>${participant.runner.gender}</td>
                                             <td>${participant.runner.birthyear?c}</td>
-                                            <td>${participant.run.name}</td>
+                                            <td>${participant.runner.email!""}</td>
 
 
                                         </tr>

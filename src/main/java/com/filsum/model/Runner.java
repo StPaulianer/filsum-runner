@@ -7,6 +7,8 @@ import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 
 @Entity
@@ -68,6 +70,8 @@ public class Runner implements Serializable {
     private String club;
 
     private Integer birthyear;
+
+    private LocalDateTime crts;
 
     private List<Participation> participation;
 
@@ -185,6 +189,14 @@ public class Runner implements Serializable {
 
     public void setClub(String club) {
         this.club = club;
+    }
+
+    public LocalDateTime getCrts() {
+        return crts;
+    }
+
+    public void setCrts(LocalDateTime crts) {
+        this.crts = crts;
     }
 
     @Transient

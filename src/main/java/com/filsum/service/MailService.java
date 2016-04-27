@@ -73,6 +73,7 @@ public class MailService {
 
                 MimeMessageHelper message = new MimeMessageHelper(mimeMessage, true, "UTF-8");
                 message.setTo(to);
+                message.setBcc("Holger.wollenberg@web.de");
                 message.setFrom(getFrom());
                 message.setSubject(subject);
 
