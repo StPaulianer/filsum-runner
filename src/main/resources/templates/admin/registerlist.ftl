@@ -40,6 +40,7 @@
                                         <th data-placeholder="Tippe m/w" width="5%">Geschlecht</th>
                                         <th width="8%">Jahrgang</th>
                                         <th width="8%">E-Mail</th>
+                                        <th width="8%">Shirt</th>
                                     </thead>
                                     <tbody>
                                         <#list participantsFormData.participants as participant>
@@ -58,7 +59,7 @@
                                             <td>${participant.runner.gender}</td>
                                             <td>${participant.runner.birthyear?c}</td>
                                             <td>${participant.runner.email!""}</td>
-
+                                            <td>${participant.runner.shirt!""}</td>
 
                                         </tr>
                                         </#list>
