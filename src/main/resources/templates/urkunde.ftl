@@ -73,6 +73,13 @@
             size: 8 . -2019in 11.2232in;
         }
 
+        @media print {
+            body {
+                content:url(images/image293.png);
+                z-index: 0;
+            }
+        }
+
         -->
     </style>
     <!--[if gte mso 9]>
@@ -100,10 +107,9 @@
     </xml><![endif]-->
 </head>
 
-<body bgcolor=white background="images/image293.png" style='margin:
-0; background-repeat:round;' ">
+<body bgcolor=white background="images/image293.png" style='margin:0; background-repeat:round;' ">
 
-<div class="main">
+<div class="main" style="z-index:99;">
     <div class="container">
 
         <div class="panel panel-default">

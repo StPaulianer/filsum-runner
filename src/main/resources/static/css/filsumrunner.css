@@ -63,6 +63,9 @@
 .tablesorter .tablesorter-filter {
     width: 100%;
 }
+.tablesorter thead .disabled {
+    display: none
+}
 .jumbotron {
     background-color: rgba(210, 232, 243, 0.9);
     margin-bottom: 20px;

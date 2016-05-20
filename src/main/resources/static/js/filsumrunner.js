@@ -19,7 +19,7 @@ $(document).ready(function()
             fixedUrl: "resultTable",
 
             // sort on the first column and third column, order asc
-            sortList: [[6,0]],
+            sortList: [[7,0]],
 
             widgetOptions: {
                 // using the default zebra striping class name, so it actually isn't included in the theme variable above

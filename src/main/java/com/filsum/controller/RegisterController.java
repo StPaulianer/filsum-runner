@@ -29,6 +29,7 @@ public class RegisterController {
         add("M");
         add("L");
         add("XL");
+        add("XXL");
     }};
 
     @Autowired

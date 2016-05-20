@@ -42,15 +42,15 @@
                                    class="table table-striped table-hover tablesorter  table-condensed">
                                 <thead>
                                 <tr>
-                                    <th data-sorter="false" class="col-sm-1">Platz*</th>
-                                    <th class="col-sm-1">Startnummer</th>
-                                    <th class="filter-select col-sm-1">Altersklasse</th>
-                                    <th class="col-sm-2">Vorname</th>
-                                    <th data-placeholder="Tippe deinen Nachnamen ein..." class="col-sm-2">Nachname</th>
-                                    <th class="col-sm-1">Jahrgang</th>
-                                    <th data-placeholder="Tippe deinen Verein ein..." class="col-sm-2">Verein</th>
-                                    <th class="col-sm-2">Zeit</th>
-                                    <th class="col-sm-1"></th>
+                                    <th data-sorter="false" class="col-sm-1 filter-false">Platz*</th>
+                                    <th data-filter="false" data-sorter="false filter-false" class="col-sm-1">Startnummer</th>
+                                    <th data-sorter="false" class="filter-select col-sm-1">Altersklasse</th>
+                                    <th data-sorter="false" class="col-sm-2 filter-false">Vorname</th>
+                                    <th data-sorter="false" class="col-sm-2 filter-false">Nachname</th>
+                                    <th data-sorter="false" class="col-sm-1 filter-false">Jahrgang</th>
+                                    <th data-sorter="false" class="col-sm-2 filter-false">Verein</th>
+                                    <th data-sorter="false" class="col-sm-2 filter-false">Zeit</th>
+                                    <th data-sorter="false" class="col-sm-1 filter-false"></th>
                                 </thead>
                                 <tbody>
                                     <#list participants as participant>
