@@ -1,6 +1,7 @@
 package com.filsum.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.validator.constraints.Email;
 
 import javax.persistence.*;
@@ -52,6 +53,7 @@ public class Runner implements Serializable {
     private String gender;
 
     // e-mail
+    @JsonIgnore
     private String email;
 
     private String street;
@@ -73,6 +75,7 @@ public class Runner implements Serializable {
 
     private LocalDateTime crts;
 
+    @JsonIgnore
     private List<Participation> participation;
 
     @Id

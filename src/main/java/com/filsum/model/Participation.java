@@ -1,5 +1,7 @@
 package com.filsum.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
@@ -89,6 +91,7 @@ public class Participation implements Serializable {
         this.crts = crts;
     }
 
+    @JsonIgnore
     @Transient
     public boolean getHasPaid() {
         return hasPaid;

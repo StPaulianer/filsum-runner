@@ -38,6 +38,11 @@ public class ParticipationService {
         return participationRepository.findByRuntimeIsNotNullAndRun(run);
     }
 
+    public List<Participation> findParticipantsByRun(Long runId){
+        Run run = runRepository.findOne(runId);
+        return participationRepository.findByRun(run);
+    }
+
     /**
      *
      * @param year actual year
@@ -87,5 +92,8 @@ public class ParticipationService {
                 participationRepository.delete(dbParticipation);
             }
         }
+    }
+    public Participation findById(Long id){
+        return participationRepository.findOne(id);
     }
 }
