@@ -7,6 +7,7 @@ import com.filsum.service.RegisterService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -71,5 +72,48 @@ public class Webservice {
         ResponseEntity<List<Participation>> entity = new ResponseEntity(participations, HttpStatus.OK);
 
         return entity;
+    }
+
+    /**
+     * shows the paid participants of runs of the actual year
+     */
+    @RequestMapping(value = "/service/csv")
+    public ResponseEntity getAllRunnerAsCSV() {
+        LOG.debug("all runner as csv");
+
+        StringBuilder data = new StringBuilder();
+
+        // header
+        data.append("'Startnummer',");
+        data.append("'Nachname',");
+        data.append("'Vorname',");
+        data.append("'Geschlecht',");
+        data.append("'Geburtsjahr',");
+        data.append("'Altersklasse',");
+        data.append("'Verein',");
+        data.append("'',");
+        data.append("'Lauf'\n");
+
+
+        LocalDate actualDate = LocalDate.now();
+        List<Participation> participations = participationService.findActualPaidParticipants(actualDate.getYear());
+
+        for(Participation participation : participations){
+            data.append("'" + participation.getStartnumber() +"',");
+            data.append("'" + participation.getRunner().getSurname() +"',");
+            data.append("'" + participation.getRunner().getForename() +"',");
+            data.append("'" + participation.getRunner().getGender() +"',");
+            data.append("'" + participation.getRunner().getBirthyear() +"',");
+            data.append("'" + participation.getRunner().getCalculateAgeGroup()+"',");
+            data.append("'" + participation.getRunner().getClub() +"',");
+            data.append("'',");
+            data.append("'" + participation.getRun().getName() +"'\n");
+        }
+
+        HttpHeaders responseHeaders = new HttpHeaders();
+        responseHeaders.add("Content-Disposition", "attachment; filename=exportFilsumLoeppt.csv");
+
+
+        return new ResponseEntity<>(data.toString(), responseHeaders, HttpStatus.OK);
     }
 }
