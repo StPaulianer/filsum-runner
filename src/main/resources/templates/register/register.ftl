@@ -29,7 +29,7 @@
 
 
                         <#if runs?size=0>
-                            <p>Aktuell sind keine Online-Anmeldungen möglich.</p>
+                            <p>Aktuell sind keine Online-Anmeldungen mehr möglich.</p>
                         <#else>
 
                             <@spring.bind path="runnerData.selectedRun" />
