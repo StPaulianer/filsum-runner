@@ -91,7 +91,7 @@ public class Webservice {
         data.append("'Geburtsjahr',");
         data.append("'Altersklasse',");
         data.append("'Verein',");
-        data.append("'',");
+        data.append("'T-Shirt',");
         data.append("'Lauf'\n");
 
 
@@ -106,7 +106,7 @@ public class Webservice {
             data.append("'" + participation.getRunner().getBirthyear() +"',");
             data.append("'" + participation.getRunner().getCalculateAgeGroup()+"',");
             data.append("'" + participation.getRunner().getClub() +"',");
-            data.append("'',");
+            data.append("'" + participation.getRunner().getShirt() +"',");
             data.append("'" + participation.getRun().getName() +"'\n");
         }
 
