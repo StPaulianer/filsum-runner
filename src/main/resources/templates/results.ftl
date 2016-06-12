@@ -14,7 +14,9 @@
 
             <div class="panel-body">
 
-
+            <#if runs?size=0>
+                <p>Aktuell liegen noch keine Ergebnisse vor.</p>
+            <#else>
 
 
                 <ul name="runs" id="runs" class="nav nav-pills registration">
@@ -74,6 +76,8 @@
                     </div>
 
                 </#if>
+            </#if>
+
             </div>
 
 
