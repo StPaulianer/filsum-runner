@@ -45,7 +45,7 @@ public class ParticipationController {
     }
 
     @RequestMapping(value = "/results")
-    public String resultsView() {
+    public String resultsView(Model model) {
         LOG.debug("results list");
         LocalDate actualDate = LocalDate.now();
         List<Run> runs = registerService.findRunsForResult(actualDate.getYear());
@@ -54,6 +54,7 @@ public class ParticipationController {
         if (runsForResult.size() > 0) {
             return "redirect:results/" + runsForResult.get(0).getRunId();
         } else {
+            model.addAttribute("runs", runsForResult);
             return "results";
         }
     }
