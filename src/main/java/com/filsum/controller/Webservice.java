@@ -92,22 +92,24 @@ public class Webservice {
         data.append("'Altersklasse',");
         data.append("'Verein',");
         data.append("'T-Shirt',");
-        data.append("'Lauf'\n");
+        data.append("'Lauf'");
+        data.append("'bezahlt'\n");
 
 
         LocalDate actualDate = LocalDate.now();
-        List<Participation> participations = participationService.findActualPaidParticipants(actualDate.getYear());
+        List<Participation> participations = participationService.findActualRegistered(actualDate.getYear());
 
         for(Participation participation : participations){
-            data.append("'" + participation.getStartnumber() +"',");
-            data.append("'" + participation.getRunner().getSurname() +"',");
-            data.append("'" + participation.getRunner().getForename() +"',");
-            data.append("'" + participation.getRunner().getGender() +"',");
-            data.append("'" + participation.getRunner().getBirthyear() +"',");
-            data.append("'" + participation.getRunner().getCalculateAgeGroup()+"',");
-            data.append("'" + participation.getRunner().getClub() +"',");
-            data.append("'" + participation.getRunner().getShirt() +"',");
-            data.append("'" + participation.getRun().getName() +"'\n");
+            data.append("'" + participation.getStartnumber() + "',");
+            data.append("'" + participation.getRunner().getSurname() + "',");
+            data.append("'" + participation.getRunner().getForename() + "',");
+            data.append("'" + participation.getRunner().getGender() + "',");
+            data.append("'" + participation.getRunner().getBirthyear() + "',");
+            data.append("'" + participation.getRunner().getCalculateAgeGroup()+ "',");
+            data.append("'" + participation.getRunner().getClub() + "',");
+            data.append("'" + participation.getRunner().getShirt() + "',");
+            data.append("'" + participation.getRun().getName() + "',");
+            data.append("'" + participation.getHasPaid() + "'\n");
         }
 
         HttpHeaders responseHeaders = new HttpHeaders();
