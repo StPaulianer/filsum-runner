@@ -109,7 +109,7 @@ public class Webservice {
             data.append("'" + participation.getRunner().getClub() + "',");
             data.append("'" + participation.getRunner().getShirt() + "',");
             data.append("'" + participation.getRun().getName() + "',");
-            data.append("'" + participation.getHasPaid() + "'\n");
+            data.append("'" + participation.isPaid() + "'\n");
         }
 
         HttpHeaders responseHeaders = new HttpHeaders();
