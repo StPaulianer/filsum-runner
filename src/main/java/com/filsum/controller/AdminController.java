@@ -46,15 +46,15 @@ public class AdminController {
         LOG.debug("register list");
 
         LocalDate actualDate = LocalDate.now();
-        List<Participation> participants = participationService.findActualRegistered(actualDate.getYear());
+        //List<Participation> participants = participationService.findActualRegistered(actualDate.getYear());
+        List<Participation> participants = participationService.findParticipantsByRun(100L);
         model.addAttribute("resultFormData", new ParticipationPaidFormData(participants));
 
         return "admin/resultlist";
     }
 
     @RequestMapping(value = "/admin/result", method = RequestMethod.POST)
-    public String postResult(Model model, @ModelAttribute("resultFormData") ParticipationPaidFormData participantsFormData,
-                                   BindingResult bindingResult) {
+    public String postResult(Model model, @ModelAttribute("resultFormData") ParticipationPaidFormData participantsFormData) {
         LOG.debug("save results: ", participantsFormData.getParticipants().size());
 
         resultService.saveResult(participantsFormData.getParticipants());
