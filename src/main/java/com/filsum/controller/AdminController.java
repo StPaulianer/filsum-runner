@@ -47,7 +47,7 @@ public class AdminController {
 
         LocalDate actualDate = LocalDate.now();
         //List<Participation> participants = participationService.findActualRegistered(actualDate.getYear());
-        List<Participation> participants = participationService.findParticipantsByRun(101L);
+        List<Participation> participants = participationService.findParticipantsByRun(102L);
         model.addAttribute("resultFormData", new ParticipationPaidFormData(participants));
 
         return "admin/resultlist";
@@ -61,7 +61,7 @@ public class AdminController {
 
         LocalDate actualDate = LocalDate.now();
         //List<Participation> participants = participationService.findActualRegistered(actualDate.getYear());
-        List<Participation> participants = participationService.findParticipantsByRun(101L);
+        List<Participation> participants = participationService.findParticipantsByRun(102L);
         model.addAttribute("resultFormData", new ParticipationPaidFormData(participants));
         model.addAttribute("success", "success");
         return "admin/resultlist";
