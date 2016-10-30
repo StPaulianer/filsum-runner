@@ -10,7 +10,7 @@
         <div class="jumbotron homecontainer">
             <div class="container">
                 <img class="logo img-responsive center-block" src="../../images/logo_filsum_loeppt.gif">
-                <h3 class="text-center">24.Juni 2016</h3>
+                <h3 class="text-center">30. Juni 2017</h3>
                 <p><a class="btn btn-primary btn-lg center-block btn-filsum" href="/register" role="button">Anmelden</a></p>
             </div>
         </div>
