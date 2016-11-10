@@ -133,10 +133,6 @@ nav.navbar.navbar-default {
     margin-left: auto;
     margin-right: auto;
 }
-.logoRow {
-    position: absolute;
-    bottom: 20px;
-}
 .homecontainer {
     margin-left: auto;
     margin-right: auto;
@@ -236,7 +232,7 @@ select.tablesorter-filter {
         display: flex;
         align-items: center
     }
-    .logoRow.row {
+    .logoRow {
         position: absolute;
         bottom: 30px;
     }
