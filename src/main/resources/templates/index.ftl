@@ -7,16 +7,20 @@
 <div class="main">
     <div class="container">
 
-        <div class="jumbotron homecontainer">
-            <div class="container">
+        <div class="row homecontainer">
+            <div class=" col-xs-12">
                 <img class="logo img-responsive center-block" src="../../images/logo_filsum_loeppt.gif">
+
+            </div>
+            <div class="col-xs-12">
                 <h3 class="text-center">30. Juni 2017</h3>
                 <p><a class="btn btn-primary btn-lg center-block btn-filsum" href="/register" role="button">Anmelden</a></p>
             </div>
         </div>
 
+        <div class="logoRow">
         <#include "/modul/sponsorList.ftl" />
-
+        </div>
 
     </div>
 </div>

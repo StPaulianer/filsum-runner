@@ -1,4 +1,4 @@
-<div class="row">
+<div class=" row">
               <div class="col-sm-4 col-md-2">
                 <div class="thumbnail">
                   <a href="http://www.ford-debuhr-filsum.de">
