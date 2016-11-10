@@ -1,0 +1,39 @@
+{
+  "name": "filsum-runner",
+  "scripts": {
+  },
+  "env": {
+    "SPRING_DATASOURCE_DIRVER-CLASS-NAME": {
+      "required": true
+    },
+    "SPRING_DATASOURCE_PASSWORD": {
+      "required": true
+    },
+    "SPRING_DATASOURCE_URL": {
+      "required": true
+    },
+    "SPRING_DATASOURCE_USER": {
+      "required": true
+    },
+    "SPRING_JPA_DATABASE-PLATFORM": {
+      "required": true
+    },
+    "SPRING_JPA_HIBERNATE_DDL-AUTO": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "pointdns",
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/gradle"
+    }
+  ]
+}
