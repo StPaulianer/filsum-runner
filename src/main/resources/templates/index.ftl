@@ -19,7 +19,7 @@
         </div>
 
         <div class="logoRow">
-        <#include "/modul/sponsorList.ftl" />
+            <#include "/modul/sponsorList.ftl" />
         </div>
 
     </div>
