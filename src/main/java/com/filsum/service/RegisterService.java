@@ -90,4 +90,8 @@ public class RegisterService {
 
         return runRepository.findByStartDateBetween(firstDay, lastDay);
     }
+
+    public Run findRun(Long runId) {
+        return runRepository.findOne(runId);
+    }
 }

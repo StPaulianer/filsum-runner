@@ -14,7 +14,28 @@
 
             <div class="panel-body">
 
-            <#if runs?size=0>
+                <form name="year" class="form-horizontal" action="/resultsyear" role="form"
+                      method="post">
+
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                <div class="form-group">
+
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control"
+                               name="year" value="${year}" min="2016"
+                               max="2017"
+                               pattern="\d{4}"
+                               required>
+
+
+                    </div>
+                    <button type="submit" class="col-sm-2 btn btn-primary btn-filsum"> anzeigen
+                    </button>
+                </div>
+                </form>
+
+
+                <#if runs?size=0>
                 <p>Aktuell liegen noch keine Ergebnisse vor.</p>
             <#else>
 
