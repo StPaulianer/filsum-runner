@@ -25,6 +25,7 @@
     </script>
 </head>
 <body>
+<div class="body">
 
     <#nested/>
 
@@ -40,6 +41,7 @@
         </ul>
     </div>
 
+</div>
 </div>
 </div>
 

@@ -1,6 +1,20 @@
-body {
+.body {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+}
+.body::after {
+    content: "";
     background: url(../images/laeufer_hintergrund_klein.jpg) no-repeat center fixed;
     background-size: 100% auto;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1
 }
 
 h3.text-center {
