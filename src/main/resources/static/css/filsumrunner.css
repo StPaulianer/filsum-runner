@@ -37,6 +37,22 @@ nav.navbar.navbar-default {
 .navbar-default .navbar-nav > li > a {
     color: #ffffff;
 }
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .active > a {
+    background-image: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+    background-image: -o-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff));
+    background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0);
+    border-color: #ffffff;
+    border-radius: 4px;
+    color: #2e6da4;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #2e6da4;
+    background-color: #8bd0bc;
+    border-radius: 4px;
+}
 .main{
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -140,17 +156,7 @@ nav.navbar.navbar-default {
 select.tablesorter-filter {
     height: 25px;
 }
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .active > a {
-    background-image: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 100%);
-    background-image: -o-linear-gradient(top, #ffffff 0%, #ffffff 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff));
-    background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0);
-    border-color: #ffffff;
 
-    color: #2e6da4;
-}
 .panel-default > .panel-heading{
     background-image: -webkit-linear-gradient(top, #8bd0bc 0%, #8bd0bc 100%);
     background-image: -o-linear-gradient(top, #8bd0bc 0%, #8bd0bc 100%);
@@ -202,7 +208,8 @@ select.tablesorter-filter {
         width: 210px;
     }
     .thumbnail {
-        min-height: 200px;
+        min-height: 100px;
+        max-width: 130px;
     }
     .thumbnail {
         display: flex;
@@ -226,7 +233,8 @@ select.tablesorter-filter {
         width: 120px;
     }
     .thumbnail {
-        min-height: 90px;
+        min-height: 100px;
+        max-width: 130px;
     }
     .thumbnail {
         display: flex;
@@ -253,7 +261,8 @@ select.tablesorter-filter {
         width: 155px;
     }
     .thumbnail {
-        min-height: 110px;
+        min-height: 100px;
+        max-width: 130px;
     }
     .thumbnail {
         display: flex;
