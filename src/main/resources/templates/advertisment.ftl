@@ -25,7 +25,7 @@
                 <div class="col-sm-3"><strong>Strecken / Startzeiten:</strong></div>
                 <div class="col-sm-9 grid-space">18:00 Uhr: Bambinilauf ca. 400m (bis einschließlich Jahrgang 2010) <br/>
                     18:30 Uhr: 2000m Schülerlauf (Jahrgang 2010 bis Jahrgang 2002)<br/>
-                    19:15 Uhr: Gemeinsamer Start 5.2 km, 10.3km, 5.2km Walking
+                    19:15 Uhr: Gemeinsamer Start 5.2 km, 10.3 km, 5.2 km Walking
                 </div>
 
                 <div class="col-sm-3"><strong>Startgebühren:</strong></div>
@@ -89,7 +89,7 @@
 
                 <div class="col-sm-3"><strong>Hinweis laut Datenschutzgesetz:</strong>
                 </div>
-                <div class="col-sm-9 grid-space">Daten werden maschinell gespeichert. <br/> <br/>
+                <div class="col-sm-9 grid-space">Daten werden maschinell gespeichert. <br/>
                 </div>
 
                 <div class="col-sm-3"><strong>Anmeldung:</strong>
