@@ -27,7 +27,7 @@
                 <div class="col-sm-3  ">
                     <div class="thumbnail">
                         <a href="http://www.küchenhaus-meinen.de">
-                            <img class="media-logo-small" src="../images/logo_meinen.png" alt="Küchenhaus Meinen">
+                            <img class="media-logo-small" src="../images/logo_meinen_klein.png" alt="Küchenhaus Meinen">
                         </a>
 
                     </div>
