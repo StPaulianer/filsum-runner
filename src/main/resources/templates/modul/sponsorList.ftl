@@ -35,7 +35,7 @@
 
                 <div class="col-sm-3  ">
                   <div class="thumbnail">
-                    <img class="media-logo-small" src="../images/logo_buhr.png" alt="Buhr Bauunternehmen">
+                    <img class="media-logo-small" src="../images/logo_buhr_klein.png" alt="Buhr Bauunternehmen">
 
                   </div>
                 </div>
@@ -61,7 +61,7 @@
                 <div class="col-sm-3  ">
                     <div class="thumbnail">
                         <a class="text-center" href="http://www.wilhelms-bau.de">
-                            <img class="media-logo-small" src="../images/wilhelms_logo.png" alt="Wilhelms Bauunternehmen">
+                            <img class="media-logo-small" src="../images/wilhelms_logo_klein.png" alt="Wilhelms Bauunternehmen">
                         </a>
                     </div>
                 </div>
