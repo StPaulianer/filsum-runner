@@ -56,7 +56,7 @@
                 </div>
 
                 <div class="col-sm-3"><strong>Zeitnahme:</strong></div>
-                <div class="col-sm-9 grid-space"> Die elektronische Zeitmessung erfolgt über einen Transponder der auf der Rückseite der Startnummer befestigt ist (ausgenommen Bambinis). Startnummern sind auf der Brust zu tragen und dürfen nicht geknickt werden.
+                <div class="col-sm-9 grid-space"> Die elektronische Zeitmessung erfolgt über einen Transponder der auf der Rückseite der Startnummer befestigt ist (ausgenommen Bambinis). Startnummern sind auf der Brust zu tragen und dürfen nicht geknickt werden.<br/>
                     Erfasst wird die Bruttozeit (Zeit vom Startschuss bis zur Überquerung der Ziellinie).
                 </div>
 
