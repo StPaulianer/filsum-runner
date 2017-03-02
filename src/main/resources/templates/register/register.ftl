@@ -15,7 +15,7 @@
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="überschrift">
-                        <h3 class="text-center">Anmeldung zum 4. Filsum löppt</h3>
+                        <h3 class="text-center">Anmeldung zum 5. Filsum löppt</h3>
                     </div>
 
                     <div class="panel-body">
@@ -29,7 +29,7 @@
 
 
                         <#if runs?size=0>
-                            <p>Aktuell sind keine Online-Anmeldungen mehr möglich.</p>
+                            <p>Online-Anmeldungen sind ab dem 02.04.2017 möglich.</p>
                         <#else>
 
                             <@spring.bind path="runnerData.selectedRun" />
@@ -75,12 +75,12 @@
                                         <div class="col-lg-8 col-md-offset-2">
                                             <label class="radio-inline">
                                                 <input class="radio-row" type="radio" name="${spring.status.expression}"
-                                                       value="w" checked/> weiblich
+                                                       value="w"/> weiblich
 
                                             </label>
                                             <label class="radio-inline">
                                                 <input class="radio-row" name="${spring.status.expression}" type="radio"
-                                                       value="m"> männlich
+                                                       value="m"/> männlich
                                             </label>
                                         </div>
 

@@ -9,7 +9,7 @@
 
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="überschrift">
-                <h3 class="text-center">Sponsoren</h3>
+                <h3 class="text-center">Sponsoren zum 5. Filsum löppt</h3>
             </div>
 
             <div class="panel-body">
@@ -57,42 +57,7 @@
                 </div>
 
 
-                <div class="col-md-6 boxline">
-                    <ul class="media-list">
-                        <li class="media">
-                            <div class="media-left">
-                                <a href="http://www.smb-haustueren.de">
-                                    <img class="media-logo" src="../images/Logo_SMB_9cm.png" alt="SMB Kunststofftechnik">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">SMB Kunststofftechnik</h4>
-                                Gewerbegebiet – An der Bahn 8    <br>
-                                26849 Filsum<br>
-                                Tel.: 04957 – 8167   <br>
-                                <a href="http://www.smb-haustueren.de"> www.smb-haustueren.de</a>  <br>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
 
-                <div class="col-md-6 boxline">
-                    <ul class="media-list">
-                        <li class="media">
-                            <div class="media-left">
-                                <img class="media-logo" src="../images/Logo_Pleis_9cm.png" alt="Dentallabor Schulte Dental">
-                            </div>
-
-                            <div class="media-body">
-                                <h4 class="media-heading">Gregor Pleis Elektroinstallation</h4>
-                                Reithmoorweg 17 <br>
-                                26849 Filsum<br>
-                                Tel.: 04957 – 8231<br>
-                                Fax.: 04957 - 912 09 2 <br>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
 
 
 
@@ -134,6 +99,81 @@
                          </li>
                      </ul>
                  </div>
+
+                <div class="col-md-6 boxline">
+                <ul class="media-list">
+                    <li class="media">
+                        <div class="media-left">
+                            <a href="http://www.küchenhaus-meinen.de">
+                                <img class="media-logo" src="../images/logo_meinen.png" alt="Küchenhaus Meinen">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Küchenhaus Meinen</h4>
+                            Am Herrenmoor 13   <br>
+                            26849 Filsum<br>
+                            Tel.: 04957 – 92 72 80  <br>
+                            <a href="http://www.küchenhaus-meinen.de"> www.küchenhaus-meinen.de</a>  <br>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+                <div class="col-md-6 boxline">
+                    <ul class="media-list">
+                        <li class="media">
+                            <div class="media-left">
+                                <a href="http://www.wilhelms-bau.de">
+                                    <img class="media-logo" src="../images/wilhelms_logo.png" alt="Hinrich Wilhelms Bauunternehmen">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Hinrich Wilhelms Bauunternehmen GmbH</h4>
+                                Hauptstrasse 82   <br>
+                                26849 Lammertsfehn<br>
+                                Tel.: 04957 – 91 09 23  <br>
+                                <a href="http://www.wilhelms-bau.de"> www.wilhelms-bau.de</a>  <br>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 boxline">
+                    <ul class="media-list">
+                        <li class="media">
+                            <div class="media-left">
+                                <a href="http://www.smb-haustueren.de">
+                                    <img class="media-logo" src="../images/Logo_SMB.png" alt="SMB Kunststofftechnik">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">SMB Kunststofftechnik</h4>
+                                Gewerbegebiet – An der Bahn 8    <br>
+                                26849 Filsum<br>
+                                Tel.: 04957 – 8167   <br>
+                                <a href="http://www.smb-haustueren.de"> www.smb-haustueren.de</a>  <br>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 boxline">
+                    <ul class="media-list">
+                        <li class="media">
+                            <div class="media-left">
+                                <img class="media-logo" src="../images/logo_buhr.png" alt="Gebr. de Buhr GmbH Bauunternehmen">
+                            </div>
+
+                            <div class="media-body">
+                                <h4 class="media-heading">Gebr. de Buhr GmbH Bauunternehmen</h4>
+                                Oll-Kamp 7 <br>
+                                26849 Filsum<br>
+                                Tel.: 04957 – 99 03 93<br>
+                                Fax.: 04957 - 99 03 94 <br>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
 
 
             </div>

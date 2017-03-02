@@ -9,26 +9,28 @@
 
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="überschrift">
-                <h3 class="text-center">Informationen zum 4. Filsum löppt</h3>
+                <h3 class="text-center">Informationen zum 5. Filsum löppt</h3>
             </div>
             <div class="panel-body">
 
                 <div class="col-sm-3"><strong>Termin / Ausrichter:</strong></div>
-                <div class="col-sm-9 grid-space"> 24.06.2016, <a target="_blank" href="http://www.bwfilsum.de">SV Blau-Weiss Filsum e.V</a></div>
+                <div class="col-sm-9 grid-space"> 30.06.2017, <a target="_blank" href="http://www.bwfilsum.de">SV Blau-Weiss Filsum e.V</a></div>
 
                 <div class="col-sm-3"><strong>Meldungen:</strong></div>
-                <div class="col-sm-9 grid-space">Onlineanmeldung <a href="/register">hier</a></div>
+                <div class="col-sm-9 grid-space"><a href="/register">Onlineanmeldung hier</a></div>
 
                 <div class="col-sm-3"><strong>Meldeschluss:</strong></div>
-                <div class="col-sm-9 grid-space">Sonntag, 19.06.2016</div>
+                <div class="col-sm-9 grid-space">Sonntag, 25.06.2017</div>
 
                 <div class="col-sm-3"><strong>Strecken / Startzeiten:</strong></div>
-                <div class="col-sm-9 grid-space">18:30 Uhr: Bambinilauf ca. 750m <br/>
-                    19:00 Uhr: Gemeinsamer Start 5 km, 10km, 5km Walking
+                <div class="col-sm-9 grid-space">18:00 Uhr: Bambinilauf ca. 400m (bis einschließlich Jahrgang 2010) <br/>
+                    18:30 Uhr: 2000m Schülerlauf (Jahrgang 2010 bis Jahrgang 2002)<br/>
+                    19:15 Uhr: Gemeinsamer Start 5.2 km, 10.3 km, 5.2 km Walking
                 </div>
 
                 <div class="col-sm-3"><strong>Startgebühren:</strong></div>
                 <div class="col-sm-9 grid-space">Bambinis: kostenlos <br/>
+                    2000m Schülerlauf: 5,00 Euro <br/>
                     5km / 10km / 5 km Walker: 8,00 Euro
                 </div>
 
@@ -39,15 +41,23 @@
 
                 <div class="col-sm-3"><strong>Abmeldungen:</strong></div>
                 <div class="col-sm-9 grid-space">Bei Nichtantreten oder vorheriger Absage erfolgt keine Erstattung der
-                    Startgebühr.
+                    Startgebühr. Der Startplatz ist nicht übertragbar.
                 </div>
 
                 <div class="col-sm-3"><strong>Ausgabe Startunterlagen:</strong></div>
-                <div class="col-sm-9 grid-space">Ausgabe der Startunterlagen erfolgt ausschließlich am Wettkampftag ab 17:00 Uhr, Sportplatz Filsum</div>
+                <div class="col-sm-9 grid-space">Ausgabe der Startunterlagen erfolgt ausschließlich am Wettkampftag ab 16:30 Uhr, Sportplatz Filsum</div>
 
                 <div class="col-sm-3"><strong>Auszeichnungen:</strong></div>
-                <div class="col-sm-9 grid-space">Medaillen und Urkunden für alle Bambinis <br/>
-                    Pokale für die Laufsieger (männlich / weiblich) des 5 km und des 10 km Laufs. Alle Teilnehmer des 5 km, 10 km und 5 km Walking Laufs erhalten ein T-Shirt. Größenwünsche können hierbei nur bis zum 12.06.2016 berücksichtigt werden.
+                <div class="col-sm-9 grid-space"> Bambinilauf: <br/> Medaillen und Urkunden für alle Bambinis direkt vor Ort<br/><br/>
+                    Schülerlauf: <br/> Pokale für die Sieger (männlich / weiblich) in den Altersklassen U8, U10, U12, U14 und U16.<br/><br/>
+                    Hauptlauf: <br/> Pokale für die drei Erstplatzierten Erwachsenen (männlich / weiblich) und der drei Erstplazierten in der Altersklasse U18 (männlich / weiblich) des 5,2 km und des 10,3 km Laufs. <br/><br/>
+                    Alle Teilnehmer (ausgenommen Bambinis) erhalten ein T-Shirt.<br/>
+                    Nach der Siegerehrung des Hauptlaufes erfolgt eine Verlosung diverser Sachpreise unter allen teilnehmenden Läufern (ausgenommen Bambinis).
+                </div>
+
+                <div class="col-sm-3"><strong>Zeitnahme:</strong></div>
+                <div class="col-sm-9 grid-space"> Die elektronische Zeitmessung erfolgt über einen Transponder der auf der Rückseite der Startnummer befestigt ist (ausgenommen Bambinis). Startnummern sind auf der Brust zu tragen und dürfen nicht geknickt werden.<br/>
+                    Erfasst wird die Bruttozeit (Zeit vom Startschuss bis zur Überquerung der Ziellinie).
                 </div>
 
                 <div class="col-sm-3"><strong>Verpflegung:</strong></div>
@@ -79,7 +89,7 @@
 
                 <div class="col-sm-3"><strong>Hinweis laut Datenschutzgesetz:</strong>
                 </div>
-                <div class="col-sm-9 grid-space">Daten werden maschinell gespeichert. <br/> <br/>
+                <div class="col-sm-9 grid-space">Daten werden maschinell gespeichert. <br/>
                 </div>
 
                 <div class="col-sm-3"><strong>Anmeldung:</strong>
@@ -95,7 +105,7 @@
 
                 <div class="col-sm-3"><strong>Flyer:</strong>
                 </div>
-                <div class="col-sm-9 grid-space">Download <a href="images/Flyer.pdf">Flyer Filsum</a>
+                <div class="col-sm-9 grid-space">Download <a href="images/Flyer_2017.pdf">Flyer Filsum</a>
                 </div>
 
             </div>
