@@ -72,18 +72,12 @@
                                     <div class="form-group">
                                         <@spring.bind path="runnerData.runner.gender" />
 
-                                        <div class="col-lg-8 col-md-offset-2">
-                                            <label class="radio-inline">
-                                                <input class="radio-row" type="radio" name="${spring.status.expression}"
-                                                       value="w"/> weiblich
+                                        <label class="control-label col-sm-2" for="selectGender">Geschlecht*:</label>
 
-                                            </label>
-                                            <label class="radio-inline">
-                                                <input class="radio-row" name="${spring.status.expression}" type="radio"
-                                                       value="m"/> männlich
-                                            </label>
+                                        <@spring.bind "availGenders" />
+                                        <div class="col-sm-10">
+                                            <@spring.formSingleSelect "runnerData.runner.gender", availGenders, "class='form-control' required" />
                                         </div>
-
                                     </div>
 
                                     <div class="form-group">

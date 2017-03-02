@@ -24,16 +24,12 @@ public class RegisterController {
 
     private static final Logger LOG = LoggerFactory.getLogger(ParticipationController.class.getName());
 
-    private static final LinkedList<String> availShirts = new LinkedList<String>() {{
-        add("116/128");
-        add("134/140");
-        add("152/164");
-        add("164/170");
-        add("S");
-        add("M");
-        add("L");
-        add("XL");
-        add("XXL");
+    private static final List<String> availShirts =
+            Arrays.asList("116/128", "134/140","152/164","164/170","S","M","L","XL","XXL");
+    private static final Map<String, String> availGenders = new HashMap<String, String>() {{
+        put("", "Bitte wählen Sie");
+        put("m", "männlich");
+        put("w", "weiblich");
     }};
 
     @Autowired
@@ -67,6 +63,7 @@ public class RegisterController {
         model.addAttribute("runs", runs);
 
         model.addAttribute("availShirts", availShirts);
+        model.addAttribute("availGenders", availGenders);
         return "register/register";
     }
 
@@ -80,9 +77,10 @@ public class RegisterController {
             List<Run> runs = registerService.findRunsToRegister();
             model.addAttribute("runs", runs);
 
-            model.addAttribute("runnerData", new RunnerFormData());
-            model.addAttribute("availShirts", availShirts);
+            model.addAttribute("runnerData", runnerData);
             model.addAttribute("norun", true);
+            model.addAttribute("availShirts", availShirts);
+            model.addAttribute("availGenders", availGenders);
             return "register/register";
         }
 

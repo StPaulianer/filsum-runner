@@ -9,7 +9,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.util.List;
 
 @Entity
@@ -40,19 +39,15 @@ public class Runner implements Serializable {
 
     public static final String MALE = "m";
 
-    // id
     private Long runnerId;
 
-    // name of the runner
     private String forename;
 
-    // surname
     private String surname;
 
     // gender of the person (w or m)
     private String gender;
 
-    // e-mail
     @JsonIgnore
     private String email;
 
