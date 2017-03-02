@@ -31,7 +31,7 @@
                 <div class="col-sm-3"><strong>Startgebühren:</strong></div>
                 <div class="col-sm-9 grid-space">Bambinis: kostenlos <br/>
                     2000m Schülerlauf: 5,00 Euro <br/>
-                    5km / 10km / 5 km Walker: 8,00 Euro
+                    5.2 km / 10.3 km / 5.2 km Walker: 8,00 Euro
                 </div>
 
                 <div class="col-sm-3"><strong>Nachmeldungen:</strong></div>
@@ -50,7 +50,7 @@
                 <div class="col-sm-3"><strong>Auszeichnungen:</strong></div>
                 <div class="col-sm-9 grid-space"> Bambinilauf: <br/> Medaillen und Urkunden für alle Bambinis direkt vor Ort<br/><br/>
                     Schülerlauf: <br/> Pokale für die Sieger (männlich / weiblich) in den Altersklassen U8, U10, U12, U14 und U16.<br/><br/>
-                    Hauptlauf: <br/> Pokale für die drei Erstplatzierten Erwachsenen (männlich / weiblich) und der drei Erstplazierten in der Altersklasse U18 (männlich / weiblich) des 5,2 km und des 10,3 km Laufs. <br/><br/>
+                    Hauptlauf: <br/> Pokale für die drei erstplatzierten Erwachsenen (männlich / weiblich) und den drei Erstplatzierten in der Altersklasse U18 (männlich / weiblich) des 5,2 km und des 10,3 km Laufs. <br/><br/>
                     Alle Teilnehmer (ausgenommen Bambinis) erhalten ein T-Shirt.<br/>
                     Nach der Siegerehrung des Hauptlaufes erfolgt eine Verlosung diverser Sachpreise unter allen teilnehmenden Läufern (ausgenommen Bambinis).
                 </div>
