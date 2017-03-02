@@ -25,6 +25,10 @@ public class RegisterController {
     private static final Logger LOG = LoggerFactory.getLogger(ParticipationController.class.getName());
 
     private static final LinkedList<String> availShirts = new LinkedList<String>() {{
+        add("116/128");
+        add("134/140");
+        add("152/164");
+        add("164/170");
         add("S");
         add("M");
         add("L");
