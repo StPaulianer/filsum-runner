@@ -78,7 +78,6 @@ public class RegisterController {
             model.addAttribute("runs", runs);
 
             model.addAttribute("runnerData", runnerData);
-            model.addAttribute("norun", true);
             model.addAttribute("availShirts", availShirts);
             model.addAttribute("availGenders", availGenders);
             return "register/register";

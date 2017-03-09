@@ -94,6 +94,7 @@ $(function () {
         }
 
     });
+    $('#actualRunList').find('a:first').click();
 
     // click run in result view
     $(document).on("click", '#actualResultRun', function (e) {

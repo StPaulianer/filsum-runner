@@ -21,11 +21,6 @@
                     <div class="panel-body">
 
                         <@spring.bind path="runnerData.selectedRun" />
-                        <#if norun??>
-                            <div class="alert alert-danger">
-                                Bitte wähle einen Lauf aus.
-                            </div>
-                        </#if>
 
 
                         <#if runs?size=0>
@@ -54,7 +49,7 @@
 
                                             <ul name="runs" id="runs" class="nav nav-pills registration">
                                                 <#list runs as run>
-                                                    <li class="">
+                                                    <li id="actualRunList">
                                                         <a id="actualRun" href="#run${run.runId}"
                                                            data-runid="${run.runId}"
                                                            data-toggle="tab">
@@ -247,24 +242,18 @@
                                              aria-labelledby="überschrift${item_index}">
                                             <div class="panel-body">
 
+
                                                 <div class="form-group">
                                                     <@spring.bind path="runnerData.furtherRunners[${item_index}].gender" />
 
-                                                    <div class="col-lg-8 col-md-offset-2">
-                                                        <label class="radio-inline">
-                                                            <input class="radio-row" type="radio"
-                                                                   name="${spring.status.expression}"
-                                                                   value="w" checked/> weiblich
+                                                    <label class="control-label col-sm-2" for="selectGender">Geschlecht*:</label>
 
-                                                        </label>
-                                                        <label class="radio-inline">
-                                                            <input class="radio-row" name="${spring.status.expression}"
-                                                                   type="radio"
-                                                                   value="m"> männlich
-                                                        </label>
+                                                    <@spring.bind "availGenders" />
+                                                    <div class="col-sm-10">
+                                                        <@spring.formSingleSelect "runnerData.furtherRunners[${item_index}].gender", availGenders, "class='form-control'" />
                                                     </div>
-
                                                 </div>
+
 
                                                 <div class="form-group">
                                                     <@spring.bind path="runnerData.furtherRunners[${item_index}].forename" />

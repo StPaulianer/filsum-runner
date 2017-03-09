@@ -53,7 +53,7 @@ public class MailService {
         params.put("run", participation.getRun());
         params.put("runner", participation.getRunner());
         params.put("bambinis", bambinis);
-        sendMail(new String[] {participation.getRunner().getEmail()}, "Teilnahme an Filsum Loeppt 2016", "mail/participation.ftl",
+        sendMail(new String[] {participation.getRunner().getEmail()}, "Teilnahme an Filsum Loeppt 2017", "mail/participation.ftl",
                 params);
     }
 
