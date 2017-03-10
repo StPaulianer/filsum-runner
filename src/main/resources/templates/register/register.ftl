@@ -176,7 +176,7 @@
 
                                         <div class="col-sm-10">
                                             <@spring.bind "availShirts" />
-                                                    <@spring.formSingleSelect "runnerData.runner.shirt", availShirts, "class='form-control selectedShirt'" />
+                                                    <@spring.formSingleSelect "runnerData.runner.shirt", availShirts, "class='form-control selectedShirt' required" />
 
                                         </div>
                                     </div>

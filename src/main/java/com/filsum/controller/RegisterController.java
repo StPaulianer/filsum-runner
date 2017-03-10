@@ -24,10 +24,22 @@ public class RegisterController {
 
     private static final Logger LOG = LoggerFactory.getLogger(ParticipationController.class.getName());
 
-    private static final List<String> availShirts =
-            Arrays.asList("116/128", "134/140","152/164","164/170","S","M","L","XL","XXL");
+    private static final Map<String, String> availShirts = new LinkedHashMap<String, String>() {{
+        put("", "Bitte wähle");
+        put("116/128", "116/128");
+        put("134/140", "134/140");
+        put("152/164", "152/164");
+        put("164/170", "164/170");
+        put("S", "S");
+        put("M", "M");
+        put("L", "L");
+        put("XL", "XL");
+        put("XXL", "XXL");
+
+    }};
+
     private static final Map<String, String> availGenders = new HashMap<String, String>() {{
-        put("", "Bitte wählen Sie");
+        put("", "Bitte wähle");
         put("m", "männlich");
         put("w", "weiblich");
     }};
