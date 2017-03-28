@@ -1,7 +1,5 @@
 package com.filsum.model;
 
-import org.hibernate.validator.constraints.NotEmpty;
-
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +32,7 @@ public class RunnerFormData {
         return selectedRun;
     }
 
+    @SuppressWarnings("unused")
     public void setSelectedRun(Long selectedRun) {
         this.selectedRun = selectedRun;
     }
@@ -42,6 +41,7 @@ public class RunnerFormData {
         return furtherRunners;
     }
 
+    @SuppressWarnings("unused")
     public void setFurtherRunners(List<Runner> furtherRunners) {
         this.furtherRunners = furtherRunners;
     }

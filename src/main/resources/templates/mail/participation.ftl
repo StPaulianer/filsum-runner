@@ -4,7 +4,7 @@
 
 <p>Moin,</p>
 <p>
-Vielen Dank, dass du an unserer Veranstaltung „Filsum löppt“ am 24.06.2016 teilnehmen möchtest.
+Vielen Dank, dass du an unserer Veranstaltung „Filsum löppt“ am 30.06.2017 teilnehmen möchtest.
 Bitte überprüfe zunächst, ob deine Anmeldedaten korrekt sind:  </p>
 
 <table border="1" cellpadding="5" cellspacing="0">
@@ -82,7 +82,7 @@ Sind alle Anmeldedaten nach deinen Wünschen, dann überweise bitte den Betrag v
 
 <p>
 Sobald Deine Zahlung bei uns eingegangen ist, werden wir dich in unsere Starterliste auf unserer Homepage <a href="http://www.filsumloeppt.de">www.filsumloeppt.de</a> aufnehmen. Erst dann ist der Anmeldevorgang vollständig abgeschlossen. Wir bitten Dich hierbei um Verständnis, dass die Aufnahme in die Starterliste 2-3 Werktage in Anspruch nehmen kann.
-Es werden nur Anmeldungen berücksichtigt, deren Zahlungseingang vor dem 23.06.2016 erfolgt ist.
+Es werden nur Anmeldungen berücksichtigt, deren Zahlungseingang vor dem 29.06.2017 erfolgt ist.
 </p>
 
 <p>Sportliche Grüße,    </p>

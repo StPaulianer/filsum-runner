@@ -24,12 +24,24 @@ public class RegisterController {
 
     private static final Logger LOG = LoggerFactory.getLogger(ParticipationController.class.getName());
 
-    private static final LinkedList<String> availShirts = new LinkedList<String>() {{
-        add("S");
-        add("M");
-        add("L");
-        add("XL");
-        add("XXL");
+    private static final Map<String, String> availShirts = new LinkedHashMap<String, String>() {{
+        put("", "Bitte wähle");
+        put("116/128", "116/128");
+        put("134/140", "134/140");
+        put("152/164", "152/164");
+        put("164/170", "164/170");
+        put("S", "S");
+        put("M", "M");
+        put("L", "L");
+        put("XL", "XL");
+        put("XXL", "XXL");
+
+    }};
+
+    private static final Map<String, String> availGenders = new HashMap<String, String>() {{
+        put("", "Bitte wähle");
+        put("m", "männlich");
+        put("w", "weiblich");
     }};
 
     @Autowired
@@ -63,6 +75,7 @@ public class RegisterController {
         model.addAttribute("runs", runs);
 
         model.addAttribute("availShirts", availShirts);
+        model.addAttribute("availGenders", availGenders);
         return "register/register";
     }
 
@@ -76,9 +89,9 @@ public class RegisterController {
             List<Run> runs = registerService.findRunsToRegister();
             model.addAttribute("runs", runs);
 
-            model.addAttribute("runnerData", new RunnerFormData());
+            model.addAttribute("runnerData", runnerData);
             model.addAttribute("availShirts", availShirts);
-            model.addAttribute("norun", true);
+            model.addAttribute("availGenders", availGenders);
             return "register/register";
         }
 
