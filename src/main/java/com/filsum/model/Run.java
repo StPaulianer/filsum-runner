@@ -1,6 +1,8 @@
 package com.filsum.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
@@ -27,8 +29,10 @@ public class Run implements Serializable {
 
     private boolean showResult = true;
 
+    @JsonIgnore
     private LocalDate participationDeadline;
 
+    @JsonIgnore
     private List<Participation> participation;
 
     @Id

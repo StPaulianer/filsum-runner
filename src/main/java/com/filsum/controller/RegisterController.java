@@ -1,7 +1,9 @@
 package com.filsum.controller;
 
+import com.filsum.model.Participation;
 import com.filsum.model.Run;
 import com.filsum.model.RunnerFormData;
+import com.filsum.service.ParticipationService;
 import com.filsum.service.RegisterService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.validation.Valid;
+import java.time.LocalDate;
 import java.util.*;
 
 @Controller
@@ -21,15 +24,47 @@ public class RegisterController {
 
     private static final Logger LOG = LoggerFactory.getLogger(ParticipationController.class.getName());
 
-    private static final LinkedList<String> availShirts = new LinkedList<String>() {{
-        add("S");
-        add("M");
-        add("L");
-        add("XL");
+    private static final Map<String, String> availShirts = new LinkedHashMap<String, String>() {{
+        put("", "Bitte wähle");
+        put("116/128", "116/128");
+        put("134/140", "134/140");
+        put("152/164", "152/164");
+        put("164/170", "164/170");
+        put("S", "S");
+        put("M", "M");
+        put("L", "L");
+        put("XL", "XL");
+        put("XXL", "XXL");
+
+    }};
+
+    private static final Map<String, String> availGenders = new HashMap<String, String>() {{
+        put("", "Bitte wähle");
+        put("m", "männlich");
+        put("w", "weiblich");
     }};
 
     @Autowired
     private RegisterService registerService;
+
+    @Autowired
+    private ParticipationService participationService;
+
+    /**
+     * shows the paid participants of runs of the actual year
+     */
+    @RequestMapping(value = "/registerlist")
+    public String participantView(Model model) {
+        LOG.debug("register list");
+        System.out.println("register list start");
+
+        LocalDate actualDate = LocalDate.now();
+        List<Participation> participants = participationService.findActualRegistered(actualDate.getYear());
+        model.addAttribute("participants", participants);
+
+        System.out.println("participants list end");
+        return "registerlist";
+    }
 
     @RequestMapping(value = "/register")
     public String registerView(Model model) {
@@ -40,6 +75,7 @@ public class RegisterController {
         model.addAttribute("runs", runs);
 
         model.addAttribute("availShirts", availShirts);
+        model.addAttribute("availGenders", availGenders);
         return "register/register";
     }
 
@@ -53,8 +89,9 @@ public class RegisterController {
             List<Run> runs = registerService.findRunsToRegister();
             model.addAttribute("runs", runs);
 
-            model.addAttribute("runnerData", new RunnerFormData());
+            model.addAttribute("runnerData", runnerData);
             model.addAttribute("availShirts", availShirts);
+            model.addAttribute("availGenders", availGenders);
             return "register/register";
         }
 

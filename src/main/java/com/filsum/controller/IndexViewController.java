@@ -42,7 +42,7 @@ public class IndexViewController {
         return "dataprivacy";
     }
 
-    @RequestMapping(path = "/advertisment")
+    @RequestMapping(path = "/infos")
     public String viewAdvertisment() {
         return "advertisment";
     }
@@ -55,6 +55,11 @@ public class IndexViewController {
     @RequestMapping(path = "/sponsor")
     public String viewSponsor() {
         return "sponsor";
+    }
+
+    @RequestMapping(path = "/urkunde")
+    public String viewUrkunde() {
+        return "urkunde";
     }
 
     @InitBinder

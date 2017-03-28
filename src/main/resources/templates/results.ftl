@@ -8,9 +8,36 @@
     <div class="container">
 
         <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="überschrift">
+                <h3 class="text-center">Ergebnisse</h3>
+            </div>
+
             <div class="panel-body">
 
-                <h3 class="col-sm-14 col-sm-offset-0">Ergebnisse</h3>
+                <form name="year" class="form-horizontal" action="/resultsyear" role="form"
+                      method="post">
+
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                <div class="form-group">
+
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control"
+                               name="year" value="${year}" min="2016"
+                               max="2017"
+                               pattern="\d{4}"
+                               required>
+
+
+                    </div>
+                    <button type="submit" class="col-sm-2 btn btn-primary btn-filsum"> anzeigen
+                    </button>
+                </div>
+                </form>
+
+
+                <#if runs?size=0>
+                <p>Aktuell liegen noch keine Ergebnisse vor.</p>
+            <#else>
 
 
                 <ul name="runs" id="runs" class="nav nav-pills registration">
@@ -38,15 +65,15 @@
                                    class="table table-striped table-hover tablesorter  table-condensed">
                                 <thead>
                                 <tr>
-                                    <th data-sorter="false" class="col-sm-1">Platz*</th>
-                                    <th class="col-sm-1">Startnummer</th>
-                                    <th class="filter-select col-sm-1">Altersklasse</th>
-                                    <th class="col-sm-2">Vorname</th>
-                                    <th data-placeholder="Tippe deinen Nachnamen ein..." class="col-sm-2">Nachname</th>
-                                    <th class="col-sm-1">Jahrgang</th>
-                                    <th data-placeholder="Tippe deinen Verein ein..." class="col-sm-2">Verein</th>
-                                    <th class="col-sm-2">Zeit</th>
-                                    <th class="col-sm-1"></th>
+                                    <th data-sorter="false" class="col-sm-1 filter-false">Platz*</th>
+                                    <th data-filter="false" data-sorter="false filter-false" class="col-sm-1">Startnummer</th>
+                                    <th data-sorter="false" class="filter-select col-sm-1">Altersklasse</th>
+                                    <th data-sorter="false" class="col-sm-2 filter-false">Vorname</th>
+                                    <th data-sorter="false" class="col-sm-2 filter-false">Nachname</th>
+                                    <th data-sorter="false" class="col-sm-1 filter-false">Jahrgang</th>
+                                    <th data-sorter="false" class="col-sm-2 filter-false">Verein</th>
+                                    <th data-sorter="false" class="col-sm-2 filter-false">Zeit</th>
+                                    <th data-sorter="false" class="col-sm-1 filter-false"></th>
                                 </thead>
                                 <tbody>
                                     <#list participants as participant>
@@ -60,7 +87,7 @@
                                         <td>${participant.runner.club}</td>
                                         <td>${participant.runtime}</td>
                                         <td>
-                                            <a href="https://www.dropbox.com/sh/8ckwnaxg2ayu0kz/AAAi7PHnKNkGX_ovWWrEzgg1a?dl=0">Urkunde</a>
+                                            <a href="http://filsumloeppt.sbserver.de/generate_urkunde.php?id=${participant.participationId}">Urkunde</a>
                                         </td>
                                     </tr>
                                     </#list>
@@ -70,6 +97,8 @@
                     </div>
 
                 </#if>
+            </#if>
+
             </div>
 
 
@@ -79,5 +108,10 @@
                 </div>
             </#if>
         </div>
+
+        <#include "/modul/sponsorList.ftl" />
+
+    </div>
+    </div>
 
 </@layout.default>

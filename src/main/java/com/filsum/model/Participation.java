@@ -1,12 +1,12 @@
 package com.filsum.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 
 @Entity
 @XmlRootElement
@@ -20,7 +20,11 @@ public class Participation implements Serializable {
 
     private boolean paid = false;
 
+    private boolean hasPaid = false;
+
     private String startnumber;
+
+    private LocalDateTime crts;
 
     private Run run;
 
@@ -77,5 +81,23 @@ public class Participation implements Serializable {
 
     public void setStartnumber(String startnumber) {
         this.startnumber = startnumber;
+    }
+
+    public LocalDateTime getCrts() {
+        return crts;
+    }
+
+    public void setCrts(LocalDateTime crts) {
+        this.crts = crts;
+    }
+
+    @JsonIgnore
+    @Transient
+    public boolean getHasPaid() {
+        return hasPaid;
+    }
+
+    public void setHasPaid(boolean hasPaid) {
+        this.hasPaid = hasPaid;
     }
 }

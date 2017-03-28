@@ -1,12 +1,14 @@
 package com.filsum.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.validator.constraints.Email;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -16,7 +18,7 @@ public class Runner implements Serializable {
 
 
     public enum AgeGroup {
-        FEMALE_YOUTH("WU18"), FEMALE("WHK"), MALE_YOUTH("MU18"), MALE("MHK"), AMBIGUOUS("U");
+        FEMALE_YOUTH("WU18"), FEMALE("W."), MALE_YOUTH("MU18"), MALE("M."), AMBIGUOUS("U");
 
         private String text;
 
@@ -37,19 +39,16 @@ public class Runner implements Serializable {
 
     public static final String MALE = "m";
 
-    // id
     private Long runnerId;
 
-    // name of the runner
     private String forename;
 
-    // surname
     private String surname;
 
     // gender of the person (w or m)
     private String gender;
 
-    // e-mail
+    @JsonIgnore
     private String email;
 
     private String street;
@@ -69,6 +68,9 @@ public class Runner implements Serializable {
 
     private Integer birthyear;
 
+    private LocalDateTime crts;
+
+    @JsonIgnore
     private List<Participation> participation;
 
     @Id
@@ -185,6 +187,14 @@ public class Runner implements Serializable {
 
     public void setClub(String club) {
         this.club = club;
+    }
+
+    public LocalDateTime getCrts() {
+        return crts;
+    }
+
+    public void setCrts(LocalDateTime crts) {
+        this.crts = crts;
     }
 
     @Transient

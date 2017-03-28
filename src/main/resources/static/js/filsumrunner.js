@@ -19,7 +19,7 @@ $(document).ready(function()
             fixedUrl: "resultTable",
 
             // sort on the first column and third column, order asc
-            sortList: [[6,0]],
+            sortList: [[7,0]],
 
             widgetOptions: {
                 // using the default zebra striping class name, so it actually isn't included in the theme variable above
@@ -74,7 +74,6 @@ $(document).ready(function()
         if($('.' + className).length > 0){
             $('.' + className).addClass('active');
         }
-        getPicturesFromFlickr();
     }
 
 );
@@ -95,6 +94,7 @@ $(function () {
         }
 
     });
+    $('#actualRunList').find('a:first').click();
 
     // click run in result view
     $(document).on("click", '#actualResultRun', function (e) {
@@ -102,43 +102,37 @@ $(function () {
         window.location.href = "/results/" + runId;
     });
 
-    numberResultTable();
     var table = $("#resultTable");
+    numberResultTable(table);
     table.bind("sortEnd",function() {
-        numberResultTable();
+        numberResultTable(table);
     });
 
     table.bind("filterEnd",function() {
-        numberResultTable();
+        numberResultTable(table);
+    });
+
+    var parTable = $("#particpantTable");
+    numberResultTable(parTable);
+    parTable.bind("sortEnd",function() {
+        numberResultTable(parTable);
+    });
+
+    parTable.bind("filterEnd",function() {
+        numberResultTable(parTable);
     });
 
 
 });
 
-function numberResultTable(){
+function numberResultTable(changeTable){
     var i = 1;
-    var resultTable = $("#resultTable");
-    resultTable.find("tr:gt(0)").each(function() {
+    changeTable.find("tr:gt(0)").each(function() {
             if(!($(this).hasClass('tablesorter-ignoreRow')) && !($(this).hasClass('filtered')) ) {
                 $(this).find("td:eq(0)").text(i);
                 i++;
             }
     });
-}
-
-function getPicturesFromFlickr() {
-
-    var url = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=73144cfb5c4856b2ec9657674fcadc69&user_id=139699022@N07&format=json&photoset_id=72157663983567746";
-    var src;
-    $.getJSON(url + "&format=json&jsoncallback=?", function(data){
-        $.each(data.photoset.photo, function(i,item){
-            var src_small = "http://farm"+ item.farm +".static.flickr.com/"+ item.server +"/"+ item.id +"_"+ item.secret +"_q.jpg";
-            var src_big = "http://farm"+ item.farm +".static.flickr.com/"+ item.server +"/"+ item.id +"_"+ item.secret +"_b.jpg";
-            //$("<img/>").attr("src", src).appendTo("<a data-gallery>").attr("href", src).attr("").appendTo("#imageslinks");
-            $("<a href=" +src_big +" data-gallery> <img src=" +src_small + "> </a>").appendTo("#imageslinks");
-        });
-    });
-
 }
 
 var href = window.location.href;

@@ -13,6 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,11 +38,15 @@ public class RegisterService {
     private MailService mailService;
 
     public Participation createParticipation(RunnerFormData runnerData) throws Exception {
-        Runner runner = runnerRepository.save(runnerData.getRunner());
+        Runner runnerToSave = runnerData.getRunner();
+        runnerToSave.setCrts(LocalDateTime.now());
+
+        Runner runner = runnerRepository.save(runnerToSave);
         Run run = runRepository.findOne(runnerData.getSelectedRun());
         Participation participation = new Participation();
         participation.setRun(run);
         participation.setRunner(runner);
+        participation.setCrts(LocalDateTime.now());
         participationRepository.save(participation);
 
         // create participation for bambini
@@ -83,5 +89,9 @@ public class RegisterService {
         LocalDate lastDay = LocalDate.of(year, Month.DECEMBER, 31);
 
         return runRepository.findByStartDateBetween(firstDay, lastDay);
+    }
+
+    public Run findRun(Long runId) {
+        return runRepository.findOne(runId);
     }
 }

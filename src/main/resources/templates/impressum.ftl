@@ -13,6 +13,7 @@
                 <h1>Impressum</h1>
                 <h2>Angaben gemäß § 5 TMG:</h2>
                 <p>SV Blau-Weiß Filsum<br />
+                    Osterende 21 <br/>
                     26849 Filsum
                 </p>
                 <h2>Vertreten durch:</h2>

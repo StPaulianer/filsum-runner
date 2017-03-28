@@ -38,6 +38,11 @@ public class ParticipationService {
         return participationRepository.findByRuntimeIsNotNullAndRun(run);
     }
 
+    public List<Participation> findParticipantsByRun(Long runId){
+        Run run = runRepository.findOne(runId);
+        return participationRepository.findByRun(run);
+    }
+
     /**
      *
      * @param year actual year
@@ -51,6 +56,44 @@ public class ParticipationService {
         LocalDate lastDay = LocalDate.of(year, Month.DECEMBER, 31);
 
         List<Run> runsOfYear = runRepository.findByStartDateBetween(firstDay, lastDay);
-        return participationRepository.findByRunInAndPaid(runsOfYear, true);
+        return participationRepository.findByRunInAndPaidOrderByParticipationId(runsOfYear, true);
+    }
+
+    /**
+     *
+     * @param year actual year
+     * @return
+     */
+    public List<Participation> findActualRegistered(int year){
+
+        // first day of the actual year
+        LocalDate firstDay = LocalDate.of(year, Month.JANUARY, 1);
+        // last day of the actual year
+        LocalDate lastDay = LocalDate.of(year, Month.DECEMBER, 31);
+
+        List<Run> runsOfYear = runRepository.findByStartDateBetween(firstDay, lastDay);
+        return participationRepository.findByRunInOrderByParticipationId(runsOfYear);
+    }
+
+    public void savePayStatus(List<Participation> participations){
+        for (Participation participation : participations) {
+            if(participation.getHasPaid() && participation.getParticipationId() != null){
+                Participation dbParticipation = participationRepository.findOne(participation.getParticipationId());
+                dbParticipation.setPaid(true);
+                participationRepository.save(dbParticipation);
+            }
+        }
+    }
+
+    public void deleteRegistered(List<Participation> participations){
+        for (Participation participation : participations) {
+            if(participation.getHasPaid() && participation.getParticipationId() != null){
+                Participation dbParticipation = participationRepository.findOne(participation.getParticipationId());
+                participationRepository.delete(dbParticipation);
+            }
+        }
+    }
+    public Participation findById(Long id){
+        return participationRepository.findOne(id);
     }
 }

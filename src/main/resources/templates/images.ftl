@@ -1,6 +1,6 @@
 <#import "layout/default.ftl" as layout>
 <#import "/spring.ftl" as spring/>
-<@layout.default >
+<@layout.default "Filsum Loeppt" true>
 
 <#include "modul/navigation.ftl">
 
@@ -8,16 +8,14 @@
     <div class="container">
 
         <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="überschrift">
+                <h3 class="text-center">Bilder 2016</h3>
+            </div>
             <div class="panel-body">
-
-                <h3 class="col-sm-14 col-sm-offset-0">Bilder 2016</h3>
 
                 <div id="imageslinks">
 
                 </div>
-
-
-
 
             </div>
         </div>
@@ -56,6 +54,9 @@
                 </div>
             </div>
         </div>
+
+        <#include "/modul/sponsorList.ftl" />
+
     </div>
 </div>
 

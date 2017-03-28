@@ -1,4 +1,4 @@
-<#macro default title="">
+<#macro default title="" flickr=false>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,19 +25,23 @@
     </script>
 </head>
 <body>
+<div class="body">
 
     <#nested/>
 
 <div class="container">
 <div id="footer">
+
+
     <div class="footer-navi">
         <ul>
-            <li class="first">Currently 1.0.0, 24.02.2016 </li>
+            <li class="first">Currently 1.1.0, 11.02.2017 </li>
             <li class="first"><a href="/impressum">Impressum</a></li>
             <li class="last"><a href="/dataprivacy">Datenschutzerklärung</li>
         </ul>
     </div>
 
+</div>
 </div>
 </div>
 
@@ -48,6 +52,10 @@
 <script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script>
 <script type="text/javascript" src="/js/jquery.tablesorter.widgets.min.js"></script>
 <script type="text/javascript" src="/js/filsumrunner.js"></script>
+
+<#if flickr>
+    <script type="text/javascript" src="/js/filsumflickr.js"></script>
+</#if>
 
 <script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
 <script src="js/bootstrap-image-gallery.min.js"></script>
