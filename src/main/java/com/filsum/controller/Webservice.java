@@ -84,32 +84,36 @@ public class Webservice {
         StringBuilder data = new StringBuilder();
 
         // header
-        data.append("'Startnummer',");
+        data.append("'Startnr',");
         data.append("'Nachname',");
         data.append("'Vorname',");
+        data.append("'Jahrgang',");
         data.append("'Geschlecht',");
-        data.append("'Geburtsjahr',");
-        data.append("'Altersklasse',");
+        data.append("'Wettbewerb'");
         data.append("'Verein',");
-        data.append("'T-Shirt',");
-        data.append("'Lauf'");
-        data.append("'bezahlt'\n");
-
+        data.append("'ZTF1',");
+        data.append("'ZTF2',");
+        data.append("'ZTF3',");
+        data.append("'Mail',");
+        data.append("'Zeit'\n");
 
         LocalDate actualDate = LocalDate.now();
         List<Participation> participations = participationService.findActualRegistered(actualDate.getYear());
 
         for(Participation participation : participations){
-            data.append("'" + participation.getStartnumber() + "',");
+            data.append("'',");
             data.append("'" + participation.getRunner().getSurname() + "',");
             data.append("'" + participation.getRunner().getForename() + "',");
-            data.append("'" + participation.getRunner().getGender() + "',");
             data.append("'" + participation.getRunner().getBirthyear() + "',");
-            data.append("'" + participation.getRunner().getCalculateAgeGroup()+ "',");
-            data.append("'" + participation.getRunner().getClub() + "',");
-            data.append("'" + participation.getRunner().getShirt() + "',");
+            data.append("'" + participation.getRunner().getGender() + "',");
             data.append("'" + participation.getRun().getName() + "',");
-            data.append("'" + participation.isPaid() + "'\n");
+            data.append("'" + participation.getRunner().getClub() + "',");
+            data.append("'" + participation.getParticipationId() + "',");
+            data.append("'" + participation.getRun().getRunId() + "',");
+            data.append("'" + participation.getRunner().getShirt() + "',");
+            data.append("'" + participation.getRunner().getEmail() + "',");
+            data.append("''\n");
+
         }
 
         HttpHeaders responseHeaders = new HttpHeaders();
