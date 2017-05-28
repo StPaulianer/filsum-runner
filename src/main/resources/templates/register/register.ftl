@@ -24,7 +24,7 @@
 
 
                         <#if runs?size=0>
-                            <p>Online-Anmeldungen sind ab dem 02.04.2017 möglich.</p>
+                            <p>Online-Anmeldungen sind ab dem 30.03.2017 möglich.</p>
                         <#else>
 
                             <@spring.bind path="runnerData.selectedRun" />
