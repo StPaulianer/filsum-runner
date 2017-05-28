@@ -20,6 +20,7 @@
             <ul class="nav navbar-nav">
                 <li class="/admin/registerlist"><a href="/admin/registerlist">Registrierungsliste</a></li>
                 <li class="/admin/resultlist"><a href="/admin/resultlist">Ergebnisse</a></li>
+                <li class="/admin/import"><a href="/admin/import">Import</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>

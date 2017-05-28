@@ -14,8 +14,15 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.validation.Path;
 import javax.validation.Valid;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -94,5 +101,27 @@ public class AdminController {
         model.addAttribute("success", "success");
         return "admin/registerlist";
     }
+
+
+
+    @RequestMapping(value = "/admin/import", method = RequestMethod.POST)
+    public String singleFileUpload(Model model, @RequestParam("file") MultipartFile file) {
+
+        if (file.isEmpty()) {
+            model.addAttribute("message", "Please select a file to upload");
+            return "admin/import";
+        }
+
+        // TODO parse file
+
+        model.addAttribute("success", true);
+        return "admin/import";
+    }
+
+    @RequestMapping(value = "/admin/import", method = RequestMethod.GET)
+    public String fileUploadPage() {
+        return "admin/import";
+    }
+
 
 }
