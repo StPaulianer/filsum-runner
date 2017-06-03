@@ -89,7 +89,7 @@ public class Webservice {
         data.append("'Vorname',");
         data.append("'Jahrgang',");
         data.append("'Geschlecht',");
-        data.append("'Wettbewerb'");
+        data.append("'Wettbewerb',");
         data.append("'Verein',");
         data.append("'ZTF1',");
         data.append("'ZTF2',");

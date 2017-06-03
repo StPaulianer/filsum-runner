@@ -78,6 +78,20 @@ public class RegisterService {
         return participation;
     }
 
+    public Participation createParticipation(Runner runnerData, Long runId, Participation participation) throws Exception {
+
+        runnerData.setCrts(LocalDateTime.now());
+        Runner runner = runnerRepository.save(runnerData);
+
+
+        Run run = runRepository.findOne(runId);
+        participation.setRun(run);
+        participation.setRunner(runner);
+        participation.setCrts(LocalDateTime.now());
+        participationRepository.save(participation);
+        return participation;
+    }
+
     public List<Run> findRunsToRegister(){
         return runRepository.findByparticipationDeadlineAfter(LocalDate.now());
     }

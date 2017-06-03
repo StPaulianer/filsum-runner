@@ -34,4 +34,18 @@ public class ResultService {
         }
     }
 
+    public boolean saveResult(Long participationId, String result, String startnumber) {
+        Participation existingPart = participationRepository.findOne(participationId);
+
+        if(existingPart != null){
+            existingPart.setRuntime(result.trim());
+            existingPart.setStartnumber(startnumber.trim());
+            participationRepository.save(existingPart);
+            return true;
+        }
+
+        return false;
+
+    }
+
 }

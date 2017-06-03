@@ -26,6 +26,13 @@
 
                 </#if>
 
+                <#if problems??>
+                    <div class="alert alert-danger">
+                        ${problems}
+                    </div>
+
+                </#if>
+
                 <form method="POST" action="/admin/import" enctype="multipart/form-data">
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 
