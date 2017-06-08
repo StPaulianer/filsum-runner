@@ -17,24 +17,6 @@ import java.util.List;
 public class Runner implements Serializable {
 
 
-    public enum AgeGroup {
-        FEMALE_YOUTH("WU18"), FEMALE("W."), MALE_YOUTH("MU18"), MALE("M."), AMBIGUOUS("U");
-
-        private String text;
-
-        AgeGroup(String text){
-            this.text = text;
-        }
-
-        public String getText() {
-            return text;
-        }
-
-        public void setText(String text) {
-            this.text = text;
-        }
-    }
-
     public static final String FEMALE = "w";
 
     public static final String MALE = "m";
@@ -197,21 +179,5 @@ public class Runner implements Serializable {
         this.crts = crts;
     }
 
-    @Transient
-    public String getCalculateAgeGroup(){
-        int birthyearAdult = LocalDate.now().getYear() - 18;
-        AgeGroup ageGroup;
-        if(gender.equals(FEMALE) && birthyear >= birthyearAdult){
-            ageGroup = AgeGroup.FEMALE_YOUTH;
-        } else if(gender.equals(FEMALE) && birthyear < birthyearAdult) {
-            ageGroup = AgeGroup.FEMALE;
-        } else if(gender.equals(MALE) && birthyear >= birthyearAdult) {
-            ageGroup = AgeGroup.MALE_YOUTH;
-        } else if(gender.equals(MALE) && birthyear < birthyearAdult) {
-            ageGroup = AgeGroup.MALE;
-        } else {
-            ageGroup = AgeGroup.AMBIGUOUS;
-        }
-        return ageGroup.getText();
-    }
+
 }

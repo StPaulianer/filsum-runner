@@ -80,7 +80,7 @@
                                     <tr>
                                         <td></td>
                                         <td>${participant.startnumber!""}</td>
-                                        <td>${participant.runner.calculateAgeGroup}</td>
+                                        <td>${participant.calculateAgeGroup}</td>
                                         <td>${participant.runner.forename}</td>
                                         <td>${participant.runner.surname}</td>
                                         <td>${participant.runner.birthyear?c}</td>
