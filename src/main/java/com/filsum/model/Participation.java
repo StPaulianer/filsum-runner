@@ -155,29 +155,29 @@ public class Participation implements Serializable {
             int birthyear8 = LocalDate.now().getYear() - 8;
 
             if(runner.getGender().equals(runner.FEMALE)){
-                if(runner.getBirthyear() >= birthyear16){
+                if(runner.getBirthyear() < birthyear16){
                     ageGroup = AgeGroupYouth.FEMALE_18;
-                } else if(runner.getBirthyear() < birthyear16 && runner.getBirthyear() >= birthyear14) {
+                } else if(runner.getBirthyear() <= birthyear14 && runner.getBirthyear() > birthyear16) {
                     ageGroup = AgeGroupYouth.FEMALE_16;
-                } else if(runner.getBirthyear() < birthyear14 && runner.getBirthyear() >= birthyear12) {
+                } else if(runner.getBirthyear() <= birthyear12 && runner.getBirthyear() > birthyear14) {
                     ageGroup = AgeGroupYouth.FEMALE_14;
-                } else if(runner.getBirthyear() < birthyear12 && runner.getBirthyear() >= birthyear10) {
+                } else if(runner.getBirthyear() <= birthyear10 && runner.getBirthyear() > birthyear12) {
                     ageGroup = AgeGroupYouth.FEMALE_12;
-                } else if(runner.getBirthyear() < birthyear10 && runner.getBirthyear() >= birthyear8) {
+                } else if(runner.getBirthyear() <= birthyear8 && runner.getBirthyear() > birthyear10) {
                     ageGroup = AgeGroupYouth.FEMALE_10;
                 } else {
                     ageGroup = AgeGroupYouth.FEMALE_8;
                 }
             } else {
-                if(runner.getBirthyear() >= birthyear16){
+                if(runner.getBirthyear() < birthyear16){
                     ageGroup = AgeGroupYouth.MALE_18;
-                } else if(runner.getBirthyear() < birthyear16 && runner.getBirthyear() >= birthyear14) {
+                } else if(runner.getBirthyear() <= birthyear14 && runner.getBirthyear() > birthyear16) {
                     ageGroup = AgeGroupYouth.MALE_16;
-                } else if(runner.getBirthyear() < birthyear14 && runner.getBirthyear() >= birthyear12) {
+                } else if(runner.getBirthyear() <= birthyear12 && runner.getBirthyear() > birthyear14) {
                     ageGroup = AgeGroupYouth.MALE_14;
-                } else if(runner.getBirthyear() < birthyear12 && runner.getBirthyear() >= birthyear10) {
+                } else if(runner.getBirthyear() <= birthyear10 && runner.getBirthyear() > birthyear12) {
                     ageGroup = AgeGroupYouth.MALE_12;
-                } else if(runner.getBirthyear() < birthyear10 && runner.getBirthyear() >= birthyear8) {
+                } else if(runner.getBirthyear() <= birthyear8 && runner.getBirthyear() > birthyear10) {
                     ageGroup = AgeGroupYouth.MALE_10;
                 } else {
                     ageGroup = AgeGroupYouth.MALE_8;
