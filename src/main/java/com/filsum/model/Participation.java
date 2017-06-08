@@ -148,30 +148,36 @@ public class Participation implements Serializable {
             return "Bambinis";
         } else if(getRun().getName().contains("Schülerlauf")) {
             AgeGroupYouth ageGroup;
+            int birthyear16 = LocalDate.now().getYear() - 16;
+            int birthyear14 = LocalDate.now().getYear() - 14;
+            int birthyear12 = LocalDate.now().getYear() - 12;
+            int birthyear10 = LocalDate.now().getYear() - 10;
+            int birthyear8 = LocalDate.now().getYear() - 8;
+
             if(runner.getGender().equals(runner.FEMALE)){
-                if(runner.getBirthyear() >= 16){
+                if(runner.getBirthyear() >= birthyear16){
                     ageGroup = AgeGroupYouth.FEMALE_18;
-                } else if(runner.getBirthyear() < 16 && runner.getBirthyear() >= 14) {
+                } else if(runner.getBirthyear() < birthyear16 && runner.getBirthyear() >= birthyear14) {
                     ageGroup = AgeGroupYouth.FEMALE_16;
-                } else if(runner.getBirthyear() < 14 && runner.getBirthyear() >= 12) {
+                } else if(runner.getBirthyear() < birthyear14 && runner.getBirthyear() >= birthyear12) {
                     ageGroup = AgeGroupYouth.FEMALE_14;
-                } else if(runner.getBirthyear() < 12 && runner.getBirthyear() >= 10) {
+                } else if(runner.getBirthyear() < birthyear12 && runner.getBirthyear() >= birthyear10) {
                     ageGroup = AgeGroupYouth.FEMALE_12;
-                } else if(runner.getBirthyear() < 10 && runner.getBirthyear() >= 8) {
+                } else if(runner.getBirthyear() < birthyear10 && runner.getBirthyear() >= birthyear8) {
                     ageGroup = AgeGroupYouth.FEMALE_10;
                 } else {
                     ageGroup = AgeGroupYouth.FEMALE_8;
                 }
             } else {
-                if(runner.getBirthyear() >= 16){
+                if(runner.getBirthyear() >= birthyear16){
                     ageGroup = AgeGroupYouth.MALE_18;
-                } else if(runner.getBirthyear() < 16 && runner.getBirthyear() >= 14) {
+                } else if(runner.getBirthyear() < birthyear16 && runner.getBirthyear() >= birthyear14) {
                     ageGroup = AgeGroupYouth.MALE_16;
-                } else if(runner.getBirthyear() < 14 && runner.getBirthyear() >= 12) {
+                } else if(runner.getBirthyear() < birthyear14 && runner.getBirthyear() >= birthyear12) {
                     ageGroup = AgeGroupYouth.MALE_14;
-                } else if(runner.getBirthyear() < 12 && runner.getBirthyear() >= 10) {
+                } else if(runner.getBirthyear() < birthyear12 && runner.getBirthyear() >= birthyear10) {
                     ageGroup = AgeGroupYouth.MALE_12;
-                } else if(runner.getBirthyear() < 10 && runner.getBirthyear() >= 8) {
+                } else if(runner.getBirthyear() < birthyear10 && runner.getBirthyear() >= birthyear8) {
                     ageGroup = AgeGroupYouth.MALE_10;
                 } else {
                     ageGroup = AgeGroupYouth.MALE_8;
