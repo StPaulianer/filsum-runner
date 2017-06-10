@@ -23,7 +23,7 @@
                       method="post">
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 
-
+                    <#setting number_format="0.##">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="table-responsive">
