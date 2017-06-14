@@ -5,9 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 
 @Entity
 @XmlRootElement
@@ -148,11 +146,11 @@ public class Participation implements Serializable {
             return "Bambinis";
         } else if(getRun().getName().contains("Schülerlauf")) {
             AgeGroupYouth ageGroup;
-            int birthyear16 = LocalDate.now().getYear() - 16;
-            int birthyear14 = LocalDate.now().getYear() - 14;
-            int birthyear12 = LocalDate.now().getYear() - 12;
-            int birthyear10 = LocalDate.now().getYear() - 10;
-            int birthyear8 = LocalDate.now().getYear() - 8;
+            int birthyear16 = getRun().getStartDate().getYear() - 16;
+            int birthyear14 = getRun().getStartDate().getYear() - 14;
+            int birthyear12 = getRun().getStartDate().getYear() - 12;
+            int birthyear10 = getRun().getStartDate().getYear() - 10;
+            int birthyear8 = getRun().getStartDate().getYear() - 8;
 
             if(runner.getGender().equals(runner.FEMALE)){
                 if(runner.getBirthyear() < birthyear16){
@@ -186,7 +184,7 @@ public class Participation implements Serializable {
 
             return ageGroup.getText();
         } else {
-            int birthyearAdult = LocalDate.now().getYear() - 18;
+            int birthyearAdult = getRun().getStartDate().getYear() - 18;
             AgeGroup ageGroup;
             if(runner.getGender().equals(runner.FEMALE) && runner.getBirthyear() >= birthyearAdult){
                 ageGroup = AgeGroup.FEMALE_YOUTH;
