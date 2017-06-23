@@ -51,7 +51,7 @@ public class AdminController {
         LOG.debug("register list");
 
         LocalDate actualDate = LocalDate.now();
-        List<Participation> participants = participationService.findActualRegistered(actualDate.getYear());
+        List<Participation> participants = participationService.findActualNotPaidParticipants(actualDate.getYear());
         model.addAttribute("participantsFormData", new ParticipationPaidFormData(participants));
 
         return "admin/registerlist";
