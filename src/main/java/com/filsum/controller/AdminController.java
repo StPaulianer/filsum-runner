@@ -91,7 +91,7 @@ public class AdminController {
         participationService.savePayStatus(participantsFormData.getParticipants());
 
         LocalDate actualDate = LocalDate.now();
-        List<Participation> participants = participationService.findActualRegistered(actualDate.getYear());
+        List<Participation> participants = participationService.findActualNotPaidParticipants(actualDate.getYear());
         model.addAttribute("participantsFormData", new ParticipationPaidFormData(participants));
         model.addAttribute("success", "success");
         return "admin/registerlist";
@@ -105,7 +105,7 @@ public class AdminController {
         participationService.deleteRegistered(participantsFormData.getParticipants());
 
         LocalDate actualDate = LocalDate.now();
-        List<Participation> participants = participationService.findActualRegistered(actualDate.getYear());
+        List<Participation> participants = participationService.findActualNotPaidParticipants(actualDate.getYear());
         model.addAttribute("participantsFormData", new ParticipationPaidFormData(participants));
         model.addAttribute("success", "success");
         return "admin/registerlist";
