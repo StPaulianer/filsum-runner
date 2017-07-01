@@ -32,7 +32,7 @@ public class ParticipationController {
 
     @Autowired
     private RegisterService registerService;
-    public static final Integer DEFAULT_YEAR = 2016;
+    public static final Integer DEFAULT_YEAR = 2017;
 
     /**
      * shows the paid participants of runs of the actual year
