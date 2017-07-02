@@ -4,7 +4,7 @@ $(document).ready(function() {
 );
 function getPicturesFromFlickr() {
 
-    var url = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=73144cfb5c4856b2ec9657674fcadc69&user_id=139699022@N07&format=json&photoset_id=72157663983567746";
+    var url = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=be504ed1c19e2878dee74355ebd84136&photoset_id=72157682633987222&user_id=139699022%40N07&format=json&nojsoncallback=1&auth_token=72157683397577051-2464732c8c398f65&api_sig=8b4b164770edcf87c3d88d94217abc30";
     var src;
     $.getJSON(url + "&format=json&jsoncallback=?", function(data){
         $.each(data.photoset.photo, function(i,item){
