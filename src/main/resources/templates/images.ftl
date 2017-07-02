@@ -9,7 +9,7 @@
 
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="überschrift">
-                <h3 class="text-center">Bilder 2016</h3>
+                <h3 class="text-center">Bilder 2017</h3>
             </div>
             <div class="panel-body">
 
