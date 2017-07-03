@@ -186,13 +186,13 @@ public class Participation implements Serializable {
         } else {
             int birthyearAdult = getRun().getStartDate().getYear() - 18;
             AgeGroup ageGroup;
-            if(runner.getGender().equals(runner.FEMALE) && runner.getBirthyear() >= birthyearAdult){
+            if(runner.getGender().equals(runner.FEMALE) && runner.getBirthyear() > birthyearAdult){
                 ageGroup = AgeGroup.FEMALE_YOUTH;
-            } else if(runner.getGender().equals(runner.FEMALE) && runner.getBirthyear() < birthyearAdult) {
+            } else if(runner.getGender().equals(runner.FEMALE) && runner.getBirthyear() <= birthyearAdult) {
                 ageGroup = AgeGroup.FEMALE;
-            } else if(runner.getGender().equals(runner.MALE) && runner.getBirthyear() >= birthyearAdult) {
+            } else if(runner.getGender().equals(runner.MALE) && runner.getBirthyear() > birthyearAdult) {
                 ageGroup = AgeGroup.MALE_YOUTH;
-            } else if(runner.getGender().equals(runner.MALE) && runner.getBirthyear() < birthyearAdult) {
+            } else if(runner.getGender().equals(runner.MALE) && runner.getBirthyear() <= birthyearAdult) {
                 ageGroup = AgeGroup.MALE;
             } else {
                 ageGroup = AgeGroup.AMBIGUOUS;
