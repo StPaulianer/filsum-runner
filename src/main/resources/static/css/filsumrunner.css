@@ -172,10 +172,10 @@ select.tablesorter-filter {
 }
 
 .panel-default > .panel-heading{
-    background-image: -webkit-linear-gradient(top, #8bd0bc 0%, #8bd0bc 100%);
-    background-image: -o-linear-gradient(top, #8bd0bc 0%, #8bd0bc 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#8bd0bc), to(#8bd0bc));
-    background-image: linear-gradient(to bottom, #8bd0bc 0%, #8bd0bc 100%);
+    background-image: -webkit-linear-gradient(top, #2e6da4 0%, #2e6da4 100%);
+    background-image: -o-linear-gradient(top, #2e6da4 0%, #2e6da4 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#2e6da4), to(#2e6da4));
+    background-image: linear-gradient(to bottom, #2e6da4 0%, #2e6da4 100%);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9edf7', endColorstr='#ffb9def0', GradientType=0);
     border-color: #9acfea;
