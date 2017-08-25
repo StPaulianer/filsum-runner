@@ -24,7 +24,7 @@
 
 
                         <#if runs?size=0>
-                            <p>Online-Anmeldungen sind ab dem 30.03.2017 möglich.</p>
+                            <p>Online-Anmeldungen sind nicht mehr möglich. Nachmeldungen vor Ort bis eine Stunde vor dem jeweiligen Start.</p>
                         <#else>
 
                             <@spring.bind path="runnerData.selectedRun" />

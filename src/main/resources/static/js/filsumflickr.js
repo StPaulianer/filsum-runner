@@ -4,9 +4,8 @@ $(document).ready(function() {
 );
 function getPicturesFromFlickr() {
 
-    var url = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=73144cfb5c4856b2ec9657674fcadc69&user_id=139699022@N07&format=json&photoset_id=72157663983567746";
-    var src;
-    $.getJSON(url + "&format=json&jsoncallback=?", function(data){
+    var url = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=e5084b29ab011cc87bfac3880ad61b61&photoset_id=72157682633987222&format=json&nojsoncallback=1";
+    $.getJSON(url, function(data){
         $.each(data.photoset.photo, function(i,item){
             var src_small = "http://farm"+ item.farm +".static.flickr.com/"+ item.server +"/"+ item.id +"_"+ item.secret +"_q.jpg";
             var src_big = "http://farm"+ item.farm +".static.flickr.com/"+ item.server +"/"+ item.id +"_"+ item.secret +"_b.jpg";
