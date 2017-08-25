@@ -62,6 +62,26 @@ public class IndexViewController {
         return "urkunde";
     }
 
+    @RequestMapping(path = "/teilnehmer")
+    public String viewTeilnehmer() {
+        return "teilnehmer";
+    }
+    
+    @RequestMapping(path = "/ergebnisse")
+    public String viewErgebnisse() {
+        return "ergebnisse";
+    }
+
+    @RequestMapping(path = "/anmeldung")
+    public String viewAnmeldung() {
+        return "anmeldung";
+    }
+
+    @RequestMapping(path = "/veranstaltungen")
+    public String viewVeranstaltungen() {
+        return "veranstaltungen";
+    }
+
     @InitBinder
     public void dataBinding(WebDataBinder binder) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");

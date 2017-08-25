@@ -1,0 +1,42 @@
+.RRPublish div.TileHead{width:100%;font-size:1em;margin:0 0 5px 0;text-align:left;padding:0;color:#FFFFFF;background-color:#2e6da4;height:45px;display:table;box-shadow:0px 1px 2px #2C2C2C}
+.RRPublish div.ListControl{padding:2px 1% 1px 1%;background-color:#F7F7F7;position:relative;border-bottom:1px solid #CCCCCC}
+.RRPublish div.ListBack{width:15%;display:inline-block;white-space:nowrap;overflow:hidden;vertical-align:middle;cursor:pointer;background-repeat:no-repeat;background-position:left center;background-image:url('graphics/back.png');background-size:16px 16px;border-radius:5px;border:1px solid #F7F7F7;padding:5px 6px 5px 19px;color:#303099}
+.RRPublish div.ListBack:hover{border:1px solid #CCCCCC}
+.RRPublish div.ListControl.OnlyOneList div.ListBack{display:none}
+.RRPublish div.ListNav{font-weight:bold;font-size:0.9em;padding-left:5px;padding-top:5px;padding-bottom:1px;vertical-align:middle;white-space:nowrap;overflow:hidden}
+.RRPublish div.ListControl.OnlyOneList div.ListNav{display:none}
+.RRPublish div.ListControlPDF{display:inline-block;width:25%;padding:8px 2px 8px 30px;cursor:pointer;vertical-align:middle;background-repeat:no-repeat;background-position:9px center;background-image:url('graphics/pdf.gif')}
+.RRPublish div.ListControlPDF:hover{text-decoration:underline}
+.RRPublish div.ListControlLiveUpdate{display:inline-block;width:20%;vertical-align:middle;overview:hidden;white-space:nowrap;padding:3px 3px 3px 40px;margin-top:4px;margin-bottom:4px;background-repeat:no-repeat;background-position:5px center;background-image:url('graphics/liveUpdate.gif')}
+.RRPublish div.ListControlLiveUpdateLoading{background-image:url('graphics/loading.gif');background-size:16px 16px;background-position:10px center}
+.RRPublish div.ListControlSearch{display:inline-block;width:35%;vertical-align:middle;float:right;padding-top:7px}
+.RRPublish div.ListControlSearch > input{height:24px;}
+.RRPublish #rrp_btnFav{background-image:url('/RRPublish/graphics/nostar.gif');background-repeat:no-repeat;background-size:16px 16px;background-position:center;width:14%;margin-left:1%;background-color:#EEEEEE;border:1px solid #CCCCCC}
+.RRPublish #rrp_btnFav.checked{background-image:url('/RRPublish/graphics/star.gif');background-color:#FFE69C}
+@media only screen and (min-width:721px){.RRPublish div.ListControlSearch input[type='text']{height:24px;font-size:0.8em};color=#FF0000;}
+@media only screen and (max-width:750px){.RRPublish div.ListBack{width:30%}
+.RRPublish div.ListControlSearch{width:20%;padding-right:0;padding-top:1px}
+.RRPublish div.ListControl.OnlyOneList:not(.ListControlWithLiveUpdate) div.ListControlSearch{width:100%;padding-top:3px;padding-bottom:3px}
+.RRPublish div.ListControl.OnlyOneList:not(.ListControlWithLiveUpdate) div.ListControlSearch > input{height:24px;width:85%;background-position:4px center}
+.RRPublish div.ListControl.OnlyOneList:not(.ListControlWithLiveUpdate) div.ListControlSearch > input::placeholder{color:#999999}
+.RRPublish div.ListControlSearch > #rrp_btnSearch{display:none;background-color:#2e6da4;}
+.RRPublish div.ListControlSearch > input{line-height:24px;height:24px;background-position:center center}
+.RRPublish div.ListControlSearch > input::placeholder{color:transparent}
+.RRPublish #rrp_btnFav{width:40%;margin-left:4%}
+.RRPublish div.ListControl.OnlyOneList:not(.ListControlWithLiveUpdate) div.ListControlSearch #rrp_btnFav{width:14%;margin-left:1%}
+.RRPublish div.ListControlLiveUpdate{width:45%;font-size:0.9em}
+.RRPublish div.ListControlPDF{display:none}
+.RRPublish div.ListControl.SearchFocus div.ListBack{display:none}
+.RRPublish div.ListControl.SearchFocus div.ListControlLiveUpdate{display:none}
+.RRPublish div.ListControl.SearchFocus div.ListControlSearch{width:100%}
+.RRPublish div.ListControl.SearchFocus div.ListControlSearch input{width:85%;background-position:4px center}
+.RRPublish div.ListControl.SearchFocus div.ListControlSearch input::placeholder{color:#999999}
+.RRPublish div.ListControl.SearchFocus #rrp_btnFav{width:14%;margin-left:1%}}
+.RRPublish table.MainTable{width:100%;border-spacing:0;background-color:#FFFFFF;border-collapse:separate}
+.RRPublish table.MainTable th{text-align:left;vertical-align:top}
+.RRPublish table.MainTable td{padding:2px 4px 2px 1px}
+.RRPublish table.MainTable td:first-child{padding:0}
+.RRPublish table.MainTable td.listGrouping{border-bottom:1px solid #CCCCCC !important;padding:5px 4px 1px 3px;background-color:#F3F3F6;font-size:1em;color:#333333}
+.RRPublish table.MainTable thead{padding-top:2px;padding-bottom:2px;}
+
+                
