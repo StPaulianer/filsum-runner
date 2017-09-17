@@ -15,7 +15,7 @@
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="überschrift">
-                        <h3 class="text-center">Anmeldung zum 5. Filsum löppt</h3>
+                        <h3 class="text-center">Anmeldung zum 6. Filsum löppt</h3>
                     </div>
 
                     <div class="panel-body">
@@ -24,7 +24,7 @@
 
 
                         <#if runs?size=0>
-                            <p>Online-Anmeldungen sind nicht mehr möglich. Nachmeldungen vor Ort bis eine Stunde vor dem jeweiligen Start.</p>
+                            <p>Online-Anmeldungen sind ab dem 02.04.2018 möglich.</p>
                         <#else>
 
                             <@spring.bind path="runnerData.selectedRun" />

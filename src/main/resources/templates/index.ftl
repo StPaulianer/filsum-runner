@@ -13,7 +13,7 @@
 
             </div>
             <div class="col-xs-12">
-                <h3 class="text-center">30. Juni 2017</h3>
+                <h3 class="text-center">29. Juni 2018</h3>
                 <p><a class="btn btn-primary btn-lg center-block btn-filsum" href="/register" role="button">Anmelden </a></p>
             </div>
         </div>
